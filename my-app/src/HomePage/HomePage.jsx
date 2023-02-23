@@ -3,8 +3,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { data, fry_deals, room_data } from "./HomeData";
 
-
-
 export const HomePage = () => {
   return (
     <Box>

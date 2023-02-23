@@ -6,7 +6,7 @@ import Sidebar from "../Components/Sidebar";
 const ProductPage = () => {
   return (
     <>
-      <Stack direction={["column", "row", "row"]}>
+      <Stack direction={["column", "column", "row"]} margin="3" padding="3">
         <Sidebar />
         <ProductList />
       </Stack>

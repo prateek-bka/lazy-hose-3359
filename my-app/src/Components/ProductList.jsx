@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { getProduct } from "../Redux/ProductReducer/action";
 import ProductCard from "./ProductCard";
 import styles from "../styles/productlist.module.css";
@@ -29,7 +29,11 @@ const ProductList = () => {
       <SimpleGrid columns={3} spacing={10}>
         {furnitureProduct.length > 0 &&
           furnitureProduct.map((el) => {
-            return <ProductCard key={el.id} card={el} />;
+            return (
+              <Link to={`/product/${el.id}`}>
+                <ProductCard key={el.id} card={el} />
+              </Link>
+            );
           })}
       </SimpleGrid>
     </>

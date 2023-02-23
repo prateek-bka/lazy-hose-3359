@@ -8,7 +8,6 @@ const ProductPage = () => {
     <>
       <Stack direction={["column", "row", "row"]}>
         <Sidebar />
-
         <ProductList />
       </Stack>
     </>

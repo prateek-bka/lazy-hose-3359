@@ -30,9 +30,9 @@ const ProductList = () => {
         {furnitureProduct.length > 0 &&
           furnitureProduct.map((el) => {
             return (
-              <Link to={`/product/${el.id}`}>
+            
                 <ProductCard key={el.id} card={el} />
-              </Link>
+              
             );
           })}
       </SimpleGrid>

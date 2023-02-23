@@ -51,16 +51,15 @@ export const HomePage = () => {
             return (
               <div key={ele.id}>
                 <Image height={"15rem"} src={ele.src} alt="" width={"100%"} />
-                <p>{ele.title} {"→"}</p>
+                <p>
+                  {ele.title} {"→"}
+                </p>
               </div>
             );
           })}
         </Box>
       </Box>
-
       {/* -------------------------------------- */}
-
-
       <Box
         className="shop_by"
         width={"90%"}
@@ -68,20 +67,21 @@ export const HomePage = () => {
         textAlign={"center"}
       >
         <Heading mt={30} marginBottom={30} textAlign={"start"}>
-        What The Fry Deals
+          What The Fry Deals
         </Heading>
         <Box display={"flex"} gap={10}>
           {fry_deals.map((ele) => {
             return (
               <div key={ele.id}>
-                <Image height={"25rem"} src={ele.src} alt=""  width={"100%"}/>
-                <h4 Font-weight={"50"} >{ele.head}</h4>
+                <Image height={"25rem"} src={ele.src} alt="" width={"100%"} />
+                <h4 Font-weight={"50"}>{ele.head}</h4>
                 <p>{ele.title}</p>
               </div>
             );
           })}
         </Box>
-      </Box>    </Box>
+      </Box>{" "}
+    </Box>
   );
 };
 

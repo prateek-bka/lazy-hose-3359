@@ -371,6 +371,36 @@
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
       "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Obeisance Fabric Sofa",
+      "price": 35785,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/r/o/494x544/romina-3-seater--lhs-sectional-sofa-in-navy-blue-colour---casacraft-by-pepperfry-romina-3-seater--lh-l84c6x.jpg",
+      "category": "sofa",
+      "rating": 4,
+      "ratingImage": "⭐⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "name": "Acklom Sheesham Wood Rocking Chair",
+      "price": 28110,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/a/c/494x544/acklom-solid-wood-rocking-chair-in-honey-oak-finish-by-amberville-acklom-solid-wood-rocking-chair-in-3zf7yn.jpg",
+      "category": "chair",
+      "rating": 4,
+      "ratingImage": "⭐⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "name": "Bunka Solid Wood Arm Chair",
+      "price": 25560,
+      "img": "https://ii2.pepperfry.com/media/catalog/product/b/u/494x544/bunka-arm-chair-in-natural-finish-by-orangetree-bunka-arm-chair-in-natural-finish-by-orangetree-lw3lk5.jpg",
+      "category": "chair",
+      "rating": 5,
+      "ratingImage": "⭐⭐⭐⭐⭐",
+      "quantity": 1
     }
   ]
 }

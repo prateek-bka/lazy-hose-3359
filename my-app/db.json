@@ -343,36 +343,6 @@
       "quantity": 1
     },
     {
-      "id": 2,
-      "name": "Obeisance Fabric Sofa",
-      "price": 15750,
-      "img": "https://ii3.pepperfry.com/media/catalog/product/o/b/494x544/obeisance-1-seater-sofa-in-beige-colour-by-dreamzz-furniture-obeisance-1-seater-sofa-in-beige-colour-mfmrq5.jpg",
-      "category": "sofa",
-      "rating": 3,
-      "ratingImage": "⭐⭐⭐",
-      "quantity": 1
-    },
-    {
-      "id": 4,
-      "name": "Azalea Velvet 2 Seater Sofa",
-      "price": 38750,
-      "img": "https://ii2.pepperfry.com/media/catalog/product/a/z/494x544/azalea-2-seater-velvet-sofa-in-berry-red-colour-by-amberville-azalea-2-seater-velvet-sofa-in-berry-r-8as4rx.jpg",
-      "category": "sofa",
-      "rating": 5,
-      "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
-    },
-    {
-      "id": 8,
-      "name": "Alanzo Velvet LHS Sectional Sofa",
-      "price": 84599,
-      "img": "https://ii1.pepperfry.com/media/catalog/product/a/r/494x544/arsin-3-seater-lhs-velvet-sectional-sofa-with-lounger-in-fossil-grey-colour-by-amberville-arsin-3-se-kdlpb3.jpg",
-      "category": "sofa",
-      "rating": 5,
-      "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
-    },
-    {
       "id": 3,
       "name": "Obeisance Fabric Sofa",
       "price": 35785,
@@ -383,23 +353,23 @@
       "quantity": 1
     },
     {
-      "id": 16,
-      "name": "Acklom Sheesham Wood Rocking Chair",
-      "price": 28110,
-      "img": "https://ii3.pepperfry.com/media/catalog/product/a/c/494x544/acklom-solid-wood-rocking-chair-in-honey-oak-finish-by-amberville-acklom-solid-wood-rocking-chair-in-3zf7yn.jpg",
-      "category": "chair",
-      "rating": 4,
-      "ratingImage": "⭐⭐⭐⭐",
+      "id": 2,
+      "name": "Obeisance Fabric Sofa",
+      "price": 15750,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/o/b/494x544/obeisance-1-seater-sofa-in-beige-colour-by-dreamzz-furniture-obeisance-1-seater-sofa-in-beige-colour-mfmrq5.jpg",
+      "category": "sofa",
+      "rating": 3,
+      "ratingImage": "⭐⭐⭐",
       "quantity": 1
     },
     {
-      "id": 17,
-      "name": "Bunka Solid Wood Arm Chair",
-      "price": 25560,
-      "img": "https://ii2.pepperfry.com/media/catalog/product/b/u/494x544/bunka-arm-chair-in-natural-finish-by-orangetree-bunka-arm-chair-in-natural-finish-by-orangetree-lw3lk5.jpg",
-      "category": "chair",
-      "rating": 5,
-      "ratingImage": "⭐⭐⭐⭐⭐",
+      "id": 9,
+      "name": "Indus Pure Sheesham Wood 1 Seater Sofa",
+      "price": 84599,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/i/n/494x544/indus-sheesham-wood-1-seater-sofa-in-provincial-teak-finish---by-woodsworth-indus-sheesham-wood-1-se-gkfsxq.jpg",
+      "category": "sofa",
+      "rating": 2,
+      "ratingImage": "⭐⭐",
       "quantity": 1
     }
   ]

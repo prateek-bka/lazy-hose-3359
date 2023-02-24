@@ -14,11 +14,13 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper";
 import { color } from "framer-motion";
+import Footer from "../Components/Footer";
 
 
 
 export const HomePage = () => {
   return (
+    <>
     
     <Box>
       <Navbar/>
@@ -218,6 +220,8 @@ export const HomePage = () => {
         </Box>
       </Box>
     </Box>
+    <Footer/>
+    </>
   );
 };
 

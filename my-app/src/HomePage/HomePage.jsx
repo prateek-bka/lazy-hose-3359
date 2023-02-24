@@ -1,11 +1,27 @@
-import { Box, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading, Image ,Text, Grid, GridItem,  useBreakpointValue } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { data, fry_deals, room_data } from "./HomeData";
+import { customer_speaks, data, fry_deals, furniture_decor, recommend, room_data, shopCategories } from "./HomeData";
+import { Navbar } from "./Navbar";
+
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper";
+import { color } from "framer-motion";
+
+
 
 export const HomePage = () => {
   return (
+    
     <Box>
+      <Navbar/>
       <Box width={"90%"} m="auto" display={"flex"} gap={5} margin={"auto"}>
         <Box flex={2}>
           <Carousel
@@ -42,7 +58,7 @@ export const HomePage = () => {
         margin={"auto"}
         textAlign={"center"}
       >
-        <Heading mt={30} marginBottom={30}>
+        <Heading mt={30} marginBottom={30} fontFamily={"sans-serif"}>
           Shop By Room
         </Heading>
         <Box display={"flex"} gap={10}>
@@ -65,21 +81,142 @@ export const HomePage = () => {
         margin={"auto"}
         textAlign={"center"}
       >
-        <Heading mt={30} marginBottom={30} textAlign={"start"}>
+        <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
           What The Fry Deals
         </Heading>
-        <Box display={"flex"} gap={10}>
+        <Box display={"flex"} gap={10} textAlign={"start"}>
           {fry_deals.map((ele) => {
             return (
               <div key={ele.id}>
                 <Image height={"25rem"} src={ele.src} alt="" width={"100%"} />
-                <h4 Font-weight={"50"}>{ele.head}</h4>
+                 <Text fontSize='2xl'>{ele.head}</Text>
                 <p>{ele.title}</p>
               </div>
             );
           })}
         </Box>
-      </Box>{" "}
+      </Box>
+      {/* ----------------------------Inspire and Get-Inspired---------------------------------- */}
+      <Box
+        className="inspire_get"
+        width={"90%"}
+        margin={"auto"}
+        textAlign={"center"}
+      >
+        <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
+          Inspire and Get Inspire
+        </Heading>
+        
+      </Box>
+
+
+      <Box width={"90%"} margin={"auto"}>
+      <Box >
+        <Swiper
+        effect="coverflow"
+              slidesPerView={4}
+              spaceBetween={30}
+              autoplay={{
+                delay: 1000,
+              }}
+              modules={[Navigation,Autoplay ,EffectCoverflow]}
+              navigation={true}
+              className="mySwiper"
+              loop={true}
+            >
+              {shopCategories.map((ele) => (
+                <SwiperSlide key={ele.id}>
+                  <Image width={"100%"} src={ele.url} alt="" />
+                  <p>{ele.title}</p>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+        </Box>
+      </Box>
+      {/* -------------------Trends In Furniture And Decor-------------------------------------------- */}
+      <Box
+        className="furniture_decor"
+        width={"90%"}
+        margin={"auto"}
+        textAlign={"center"}
+      >
+        <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
+          What The Fry Deals
+        </Heading>
+        <Box display={"flex"} gap={20} textAlign={"start"}>
+          {furniture_decor.map((ele) => {
+            return (
+              <div key={ele.id}>
+                <Image height={"25rem"} src={ele.src} alt="" width={"100%"} />
+                 <Text fontSize='2xl' >{ele.head}</Text>
+                <p>Explore Starting at ₹{ele.price}</p>
+              </div>
+            );
+          })}
+        </Box>
+      </Box>
+      {/* ----------------------------Customers Speak */}
+      <Box
+        className="customer_speaks"
+        width={"90%"}
+        margin={"auto"}
+        textAlign={"center"}
+      >
+        <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
+        Customers Speak
+        </Heading>
+        <Box display={"flex"} gap={10} textAlign={"start"}>
+          {customer_speaks.map((ele) => {
+            return (
+              <div key={ele.id}>
+                <Image height={"15rem"} src={ele.src} alt="" width={"100%"} />
+                 <Text fontSize='md' >{ele.head}</Text>
+                 <br />
+                 <Text fontSize='sm' >{ele.name}</Text>
+                <p >Explore Starting at ₹{ele.place}</p>
+              </div>
+            );
+          })}
+        </Box>
+      </Box>
+      {/* ------------------------------------------Recommended for you */}
+      <Box
+        className="recommended_you"
+        width={"90%"}
+        margin={"auto"}
+        textAlign={"center"}
+      >
+        <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
+        Recommended for you
+        </Heading>
+        
+      </Box>
+
+
+      <Box width={"90%"} margin={"auto"}>
+      <Box >
+        <Swiper
+        
+              slidesPerView={6}
+              spaceBetween={20}
+              autoplay={{
+                delay: 1000,
+              }}
+              modules={[Navigation,Autoplay]}
+              navigation={true}
+              className="mySwiper"
+              loop={true}
+            >
+              {recommend.map((ele) => (
+                <SwiperSlide key={ele.id}>
+                  <Image  height={"12rem"}  width={"100%"} src={ele.url} alt="" />
+                  <p>{ele.title}</p>
+                  <Text fontSize='sm' color={"orange"}>₹{ele.price}</Text>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+        </Box>
+      </Box>
     </Box>
   );
 };

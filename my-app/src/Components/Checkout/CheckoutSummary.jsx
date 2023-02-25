@@ -29,7 +29,7 @@ const CheckoutSummary = () => {
 
   return (
     <>
-      <Stack align="flex-start" w={"full"} p={5} spacing={3}>
+      <Stack align="flex-start" p={5} spacing={3}>
         <Heading color={"blackAlpha.800"} textAlign={"center"}>
           Order Summary
         </Heading>

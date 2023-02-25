@@ -64,8 +64,12 @@ const ProductCard = ({ card }) => {
         <Image src={card.img} alt={card.name} />
       </CardBody>
       <Stack>
-        <Heading size="md">{card.name}</Heading>
-        <Text color={"blue.900"}>₹{card.price}</Text>
+        <Heading size="md" textAlign={"center"} color={"blue.800"}>
+          {card.name}
+        </Heading>
+        <Heading size={"md"} textAlign={"center"} color={"blackAlpha.800"}>
+          ₹ {card.price}
+        </Heading>
         <Text>Rating: {card.ratingImage}</Text>
         <Button colorScheme="orange" onClick={() => handleCart(card)}>
           Add to Cart

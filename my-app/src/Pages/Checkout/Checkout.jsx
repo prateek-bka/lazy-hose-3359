@@ -7,7 +7,7 @@ import OrderSuccessCelebration from "../../Components/Checkout/OrderSuccessCeleb
 const Checkout = () => {
   return (
     <>
-      <Stack direction={["column", "column", "row"]}>
+      <Stack direction={["column", "column", "row"]} w={"100%"}>
         <CheckoutSummary />
         <CheckoutYourDetails />
       </Stack>

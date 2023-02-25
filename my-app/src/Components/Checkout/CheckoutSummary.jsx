@@ -27,8 +27,10 @@ const CheckoutSummary = () => {
 
   return (
     <>
-      <Stack align="flex-start" m={"auto"} w={"full"} p={5} spacing={3}>
-        <Heading>Order Summary</Heading>
+      <Stack align="flex-start" w={"full"} p={5} spacing={3}>
+        <Heading color={"blackAlpha.800"} textAlign={"center"}>
+          Order Summary
+        </Heading>
         <Divider />
 
         {cartData.map((e) => {

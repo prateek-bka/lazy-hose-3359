@@ -341,6 +341,36 @@
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
       "quantity": 1
+    },
+    {
+      "id": 1,
+      "name": "Volkache Velvet 2 Seater Sofa",
+      "price": 50450,
+      "img": "https://ii2.pepperfry.com/media/catalog/product/t/r/494x544/treviso-2-seater-velvet-sofa-in-steel-grey-colour-by-woodsworth-treviso-2-seater-velvet-sofa-in-stee-uuvayd.jpg",
+      "category": "sofa",
+      "rating": 4,
+      "ratingImage": "⭐⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Obeisance Fabric Sofa",
+      "price": 15750,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/o/b/494x544/obeisance-1-seater-sofa-in-beige-colour-by-dreamzz-furniture-obeisance-1-seater-sofa-in-beige-colour-mfmrq5.jpg",
+      "category": "sofa",
+      "rating": 3,
+      "ratingImage": "⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Obeisance Fabric Sofa",
+      "price": 35785,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/r/o/494x544/romina-3-seater--lhs-sectional-sofa-in-navy-blue-colour---casacraft-by-pepperfry-romina-3-seater--lh-l84c6x.jpg",
+      "category": "sofa",
+      "rating": 4,
+      "ratingImage": "⭐⭐⭐⭐",
+      "quantity": 1
     }
   ]
 }

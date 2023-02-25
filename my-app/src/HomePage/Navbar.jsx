@@ -16,6 +16,7 @@ import {
     useDisclosure,
     Heading,
   } from '@chakra-ui/react';
+  import { FiShoppingCart } from 'react-icons/fi';
   import {
     HamburgerIcon,
     CloseIcon,
@@ -23,7 +24,7 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   import logo from "../assets/FurnitureTry.jpg";
-  import { FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
+  import { FaCaretLeft, FaCaretSquareDown, FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
   
   export const Navbar=()=> {
     const { isOpen, onToggle } = useDisclosure();
@@ -131,14 +132,16 @@ import {
             </Popover>
           </Box>
         ))}
-        <Box className='cart'  paddingTop={"15px"} paddingLeft={"200px"}>
-        <FaCartPlus size={"2em"} />
-        <p>Cart</p>
+        <Box className='cart'  paddingTop={"15px"} paddingLeft={"200px"} display={"flex"}>
+        <FiShoppingCart size={"2em"} />
+        < Text m={"-18px"}>10</Text>
+        
         </Box>
         
-        <Box className='user'  paddingTop={"15px"} paddingLeft={"30px"}>
-        <FaUser size={"2em"} />
-        <p>User</p>
+        <Box className='user'  paddingTop={"15px"} paddingLeft={"30px"} onc>
+        {/* <FaUser size={"2em"} /> */}
+        <Button >Login</Button>
+        
         </Box>
         
       </Stack>

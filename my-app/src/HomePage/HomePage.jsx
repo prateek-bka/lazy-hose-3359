@@ -41,7 +41,7 @@ export const HomePage = () => {
             {data.map((ele) => {
               return (
                 <div key={ele.id}>
-                  <Image height={"32rem"}   src={ele.src} alt="" />
+                  <Image height={"20rem"}   src={ele.src} alt="" />
                 </div>
               );
             })}
@@ -122,6 +122,7 @@ export const HomePage = () => {
         </SimpleGrid>
       </Box>
       {/* ----------------------------Inspire and Get-Inspired---------------------------------- */}
+      
       <Box
         className="inspire_get"
         width={"90%"}

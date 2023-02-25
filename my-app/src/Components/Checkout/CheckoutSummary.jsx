@@ -25,6 +25,8 @@ const CheckoutSummary = () => {
       .catch((err) => console.log("error fetching cart data"));
   }, []);
 
+  const total = cartData.reduce((acc, item) => acc + item.price, 0);
+
   return (
     <>
       <Stack align="flex-start" w={"full"} p={5} spacing={3}>
@@ -36,37 +38,31 @@ const CheckoutSummary = () => {
         {cartData.map((e) => {
           return (
             <>
-              <Card w={"450px"} p={"1"} alignItems="center">
-                <Box
-                  display="flex"
-                  alignItems="center"
-                  letterSpacing="wide"
-                  fontSize="xl"
-                  m={"5"}
+              <HStack w={"450px"} p={"1"} alignItems="center">
+                <Image w="75px" src={e.img} alt={e.name} />
+                <Heading
+                  w="200px"
+                  size="md"
+                  color="darkgreen"
+                  textAlign={"center"}
                 >
-                  <Box>
-                    <Image w="75px" src={e.img} alt={e.name} />
-                  </Box>
-                  <Box>
-                    <Heading ml={15} color="purple" size="lg">
-                      ₹{e.price}
-                    </Heading>
-                  </Box>
-                </Box>
-                <Box>
-                  <Heading size="md" color="darkgreen" textAlign={"center"}>
-                    {e.name}
-                  </Heading>
-                </Box>
-                <Stack></Stack>
-              </Card>
+                  {e.name}
+                </Heading>
+                <Heading w="100px" color="purple" size="md">
+                  ₹ {e.price}
+                </Heading>
+              </HStack>
             </>
           );
         })}
 
-        <HStack>
-          <Text>Total: </Text>
-        </HStack>
+        <Divider />
+
+        <Box m={5}>
+          <Heading ml={20} size="lg" textAlign={"center"}>
+            Total: ₹ {total}
+          </Heading>
+        </Box>
         <Text></Text>
       </Stack>
     </>

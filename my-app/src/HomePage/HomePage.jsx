@@ -24,7 +24,7 @@ export const HomePage = () => {
     <>
     
     <Box>
-      <Navbar/>
+    
       <br /><br />
       
         {

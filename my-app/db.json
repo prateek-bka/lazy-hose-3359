@@ -333,16 +333,6 @@
   ],
   "card-data": [
     {
-      "id": 5,
-      "name": "Adalia Leatherette 2 Seater Sofa",
-      "price": 30390,
-      "img": "https://ii2.pepperfry.com/media/catalog/product/a/d/494x544/adalia-2-seater-leatherette-sofa-in-brown-colour-by-casacraft-adalia-2-seater-leatherette-sofa-in-br-lpniim.jpg",
-      "category": "sofa",
-      "rating": 5,
-      "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
-    },
-    {
       "id": 1,
       "name": "Volkache Velvet 2 Seater Sofa",
       "price": 50450,
@@ -363,13 +353,23 @@
       "quantity": 1
     },
     {
-      "id": 3,
-      "name": "Obeisance Fabric Sofa",
-      "price": 35785,
-      "img": "https://ii1.pepperfry.com/media/catalog/product/r/o/494x544/romina-3-seater--lhs-sectional-sofa-in-navy-blue-colour---casacraft-by-pepperfry-romina-3-seater--lh-l84c6x.jpg",
+      "id": 5,
+      "name": "Adalia Leatherette 2 Seater Sofa",
+      "price": 30390,
+      "img": "https://ii2.pepperfry.com/media/catalog/product/a/d/494x544/adalia-2-seater-leatherette-sofa-in-brown-colour-by-casacraft-adalia-2-seater-leatherette-sofa-in-br-lpniim.jpg",
       "category": "sofa",
-      "rating": 4,
-      "ratingImage": "⭐⭐⭐⭐",
+      "rating": 5,
+      "ratingImage": "⭐⭐⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Fernand Fabric 2 Seater Multicolor Sofa",
+      "price": 30990,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/s/i/494x544/simon-2-seater-sofa-in-red-multi-colour-by-casacraft-simon-2-seater-sofa-in-red-multi-colour-by-casa-lkduch.jpg",
+      "category": "sofa",
+      "rating": 3,
+      "ratingImage": "⭐⭐⭐",
       "quantity": 1
     },
     {

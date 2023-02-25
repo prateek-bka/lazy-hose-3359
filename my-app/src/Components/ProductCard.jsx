@@ -24,6 +24,7 @@ import {
 import axios from "axios";
 
 const ProductCard = ({ card }) => {
+
   const toast = useToast();
   const dispatch = useDispatch();
   const { isLoading, isError, cart_products } = useSelector(
@@ -45,6 +46,7 @@ const ProductCard = ({ card }) => {
           duration: 4000,
           isClosable: true,
         });
+
       })
       .catch(() => {
         dispatch(getcartFailure());

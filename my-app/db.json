@@ -371,6 +371,16 @@
       "rating": 3,
       "ratingImage": "⭐⭐⭐",
       "quantity": 1
+    },
+    {
+      "id": 32,
+      "name": "Kosmo Universal Sliding Door Wardrobe",
+      "price": 87570,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/k/o/494x544/kosmo-universal-2-door-sliding-wardrobe-in-natural-teak-by-spacewood-kosmo-universal-2-door-sliding--8vzzog.jpg",
+      "category": "wardrobe",
+      "rating": 5,
+      "ratingImage": "⭐⭐⭐⭐⭐",
+      "quantity": 1
     }
   ]
 }

@@ -172,7 +172,7 @@ const CheckoutYourDetails = () => {
   return (
     <>
       <Stack m={"auto"} w={"full"} p={5} spacing={3} align="flex-start">
-        <Accordion w={"full"} defaultIndex={[0]} allowToggle>
+        <Accordion w={"full"} defaultIndex={[0]} allowMultiple>
           <AccordionItem>
             <h2>
               <AccordionButton _expanded={{ bg: "green", color: "white" }}>
@@ -230,93 +230,94 @@ const CheckoutYourDetails = () => {
               </VStack>
             </AccordionPanel>
           </AccordionItem>
-        </Accordion>
-      </Stack>
 
-      <Stack m={"auto"} w={"full"} p={5} spacing={3} align="flex-start">
-        <Accordion w={"full"} defaultIndex={[0]} allowToggle>
-          <AccordionItem>
-            <h2>
-              <AccordionButton _expanded={{ bg: "green", color: "white" }}>
-                <Box as="span" flex="1" textAlign="left">
-                  Payment
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <Stack>
-                <Tabs variant="enclosed-colored" colorScheme="orange" isFitted>
-                  <TabList>
-                    <Tab _selected={{ color: "white", bg: "orange" }}>
-                      Cash on Delivery
-                    </Tab>
+          <Accordion w={"full"} defaultIndex={[0]} allowMultiple>
+            <AccordionItem>
+              <h2>
+                <AccordionButton _expanded={{ bg: "green", color: "white" }}>
+                  <Box as="span" flex="1" textAlign="left">
+                    Payment
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <Stack>
+                  <Tabs
+                    variant="enclosed-colored"
+                    colorScheme="orange"
+                    isFitted
+                  >
+                    <TabList>
+                      <Tab _selected={{ color: "white", bg: "orange" }}>
+                        Cash on Delivery
+                      </Tab>
 
-                    <Tab _selected={{ color: "white", bg: "orange" }}>
-                      Card Payment
-                    </Tab>
-                  </TabList>
+                      <Tab _selected={{ color: "white", bg: "orange" }}>
+                        Card Payment
+                      </Tab>
+                    </TabList>
 
-                  <TabPanels>
-                    <TabPanel>
-                      <Text>Deliver to above address !</Text>
-                      <CashOnDeliveryPaymentSubmitButton />
-                    </TabPanel>
-                    <TabPanel>
-                      <Text m={1} p={2}>
-                        Card Number
-                      </Text>
+                    <TabPanels>
+                      <TabPanel>
+                        <Text>Deliver to above address !</Text>
+                        <CashOnDeliveryPaymentSubmitButton />
+                      </TabPanel>
+                      <TabPanel>
+                        <Text m={1} p={2}>
+                          Card Number
+                        </Text>
 
-                      <Input
-                        id="ccn"
-                        type="password"
-                        inputmode="numeric"
-                        pattern="[0-9]{16}"
-                        autocomplete="cc-number"
-                        maxlength="16"
-                        placeholder="xxxx xxxx xxxx xxxx"
-                        onChange={(e) => setCardNumber(e.target.value)}
-                      />
+                        <Input
+                          id="ccn"
+                          type="password"
+                          inputmode="numeric"
+                          pattern="[0-9]{16}"
+                          autocomplete="cc-number"
+                          maxlength="16"
+                          placeholder="xxxx xxxx xxxx xxxx"
+                          onChange={(e) => setCardNumber(e.target.value)}
+                        />
 
-                      <HStack>
-                        <Box>
-                          <Text m={1} p={2}>
-                            CVV
-                          </Text>
-                          <Input
-                            type="password"
-                            inputmode="numeric"
-                            pattern="[0-9]{3}"
-                            maxLength={3}
-                            placeholder={"Enter 3 digits CVV"}
-                            onChange={(e) => setCVV(e.target.value)}
-                            mb={3}
-                          />
-                        </Box>
+                        <HStack>
+                          <Box>
+                            <Text m={1} p={2}>
+                              CVV
+                            </Text>
+                            <Input
+                              type="password"
+                              inputmode="numeric"
+                              pattern="[0-9]{3}"
+                              maxLength={3}
+                              placeholder={"Enter 3 digits CVV"}
+                              onChange={(e) => setCVV(e.target.value)}
+                              mb={3}
+                            />
+                          </Box>
 
-                        <Box>
-                          <Text m={1} p={2}>
-                            Expiry (MMDD)
-                          </Text>
-                          <Input
-                            type="password"
-                            inputmode="numeric"
-                            pattern="[0-9]{3}"
-                            maxLength={4}
-                            placeholder={"Enter 4 digits expiry"}
-                            onChange={(e) => setExpiry(e.target.value)}
-                            mb={3}
-                          />
-                        </Box>
-                      </HStack>
-
-                      <PaymentSubmitButton mt={3} />
-                    </TabPanel>
-                  </TabPanels>
-                </Tabs>
-              </Stack>
-            </AccordionPanel>
-          </AccordionItem>
+                          <Box>
+                            <Text m={1} p={2}>
+                              Expiry (MMDD)
+                            </Text>
+                            <Input
+                              type="password"
+                              inputmode="numeric"
+                              pattern="[0-9]{3}"
+                              maxLength={4}
+                              placeholder={"Enter 4 digits expiry"}
+                              onChange={(e) => setExpiry(e.target.value)}
+                              mb={3}
+                            />
+                          </Box>
+                        </HStack>
+                        <PaymentSubmitButton mt={3} />
+                      </TabPanel>
+                    </TabPanels>
+                  </Tabs>
+                </Stack>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
         </Accordion>
       </Stack>
     </>

@@ -2,7 +2,7 @@ import { Box, Heading, Image ,Text, Grid, GridItem,  useBreakpointValue, SimpleG
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { customer_speaks, data, fry_deals, furniture_decor, recommend, room_data, shopCategories } from "./HomeData";
-import { Navbar } from "./Navbar";
+
 
 import React, { useRef, useState } from "react";
 // Import Swiper React components
@@ -24,7 +24,7 @@ export const HomePage = () => {
     <>
     
     <Box>
-      <Navbar/>
+      
       <br /><br />
       
         {
@@ -43,7 +43,7 @@ export const HomePage = () => {
             {data.map((ele) => {
               return (
                 <div key={ele.id}>
-                  <Image height={"20rem"}   src={ele.src} alt="" />
+                  <Image height={"32rem"}   src={ele.src} alt="" />
                 </div>
               );
             })}

@@ -132,15 +132,15 @@ import {
             </Popover>
           </Box>
         ))}
-        <Box className='cart'  paddingTop={"15px"} paddingLeft={"200px"} display={"flex"}>
+        <Box className='cart'  paddingTop={"15px"} paddingLeft={"100px"} display={"flex"}>
         <FiShoppingCart size={"2em"} />
-        < Text m={"-18px"}>10</Text>
+        < Text  color={"red"} as="b" m={"-18px"} paddingLeft={"15px"} >10</Text>
         
         </Box>
         
-        <Box className='user'  paddingTop={"15px"} paddingLeft={"30px"} onc>
+        <Box className='user'  paddingTop={"15px"} paddingLeft={"50px"} >
         {/* <FaUser size={"2em"} /> */}
-        <Button >Login</Button>
+        <Button colorScheme={"blackAlpha"} >Login</Button>
         
         </Box>
         

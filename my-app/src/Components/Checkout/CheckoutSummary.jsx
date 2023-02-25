@@ -1,5 +1,7 @@
 import {
   Box,
+  Card,
+  CardBody,
   Divider,
   Heading,
   HStack,
@@ -9,47 +11,57 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import axios from "axios";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CheckoutSummary = () => {
+  const [cartData, setCartData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/card-data`)
+      .then((res) => setCartData(res.data))
+      .catch((err) => console.log("error fetching cart data"));
+  }, []);
+
   return (
     <>
-      <Stack w="full" h="full" p={10} spacing={3} align="flex-start">
+      <Stack align="flex-start" m={"auto"} w={"full"} p={5} spacing={3}>
         <Heading>Order Summary</Heading>
         <Divider />
-        {/* Mapping on Hstack */}
-        <HStack maxW={"100%"}>
-          <VStack maxW={"100%"}>
-            <Image src="" width={"45%"} />
-          </VStack>
-          <VStack maxW={"100%"} align="flex-start">
-            <HStack>
-              <Text></Text>
-            </HStack>
-            <HStack>
-              <Text></Text>
-            </HStack>
-          </VStack>
-        </HStack>
-        <Divider />
 
-        <HStack>
-          <Text m={1}></Text>
-        </HStack>
-        <HStack>
-          <VStack align={"flex-end"}>
-            <Text>Qty: 1</Text>
-          </VStack>
-          <VStack align={"flex-end"}>
-            <Text>Price Rs. {``}</Text>
-          </VStack>
-        </HStack>
-        <Divider />
-        <HStack>
-          <Text>Apply Promo Code (if any)</Text>
-          <Input></Input>
-        </HStack>
+        {cartData.map((e) => {
+          return (
+            <>
+              <Card w={"450px"} p={"1"} alignItems="center">
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  letterSpacing="wide"
+                  fontSize="xl"
+                  m={"5"}
+                >
+                  <Box>
+                    <Image w="75px" src={e.img} alt={e.name} />
+                  </Box>
+                  <Box>
+                    <Heading ml={15} color="purple" size="lg">
+                      ₹{e.price}
+                    </Heading>
+                  </Box>
+                </Box>
+                <Box>
+                  <Heading size="md" color="darkgreen" textAlign={"center"}>
+                    {e.name}
+                  </Heading>
+                </Box>
+                <Stack></Stack>
+              </Card>
+            </>
+          );
+        })}
+
         <HStack>
           <Text>Total: </Text>
         </HStack>

@@ -8,7 +8,7 @@ const Checkout = () => {
   return (
     <>
       <Stack direction={["column", "column", "row"]}>
-        {/* <CheckoutSummary /> */}
+        <CheckoutSummary />
         <CheckoutYourDetails />
       </Stack>
     </>

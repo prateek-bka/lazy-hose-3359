@@ -24,7 +24,6 @@ export const HomePage = () => {
     <>
     
     <Box>
-      
       <br /><br />
       
         {

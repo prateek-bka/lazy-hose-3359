@@ -14,7 +14,7 @@ export const reducer = (state=initialState,{type,payload}) => {
      case CART_ADD_PRODUCT_SUCCESS :
         return {...state,isLoading:false,cart_products:[...state.cart_products,payload],isError:false}
         case CART_PRODUCT_SUCCESS:
-            return {isLoading:false,cart_products:payload}
+          return {...state,isLoading:false,cart_products:payload,isError:false}
     
     default:
     return state

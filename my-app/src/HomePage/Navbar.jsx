@@ -25,10 +25,10 @@ import {
   } from '@chakra-ui/icons';
   import logo from "../assets/FurnitureTry.jpg";
   import { FaCaretLeft, FaCaretSquareDown, FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
-  
+  import { useSelector } from 'react-redux';
+  // import {Link} from 'react-router-dom'
   export const Navbar=()=> {
     const { isOpen, onToggle } = useDisclosure();
-  
     return (
       <Box  width={"100%"} margin={"auto"}>
         <Flex
@@ -89,7 +89,9 @@ import {
     const linkColor = useColorModeValue('black.1000', 'black.200');
     const linkHoverColor = useColorModeValue('black.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-  
+    const {isLoading,isError,cart_products}=useSelector((store)=>store.cartReducer);
+    const number_of_item=cart_products.reduce((acc,current)=>acc+current.quantity,0)
+    console.log(isLoading,isError,cart_products)
     return (
       <Stack direction={'row'} spacing={4}  margin={'auto'} >
         <img  width={"150px"} src={logo} alt="" />
@@ -132,10 +134,12 @@ import {
             </Popover>
           </Box>
         ))}
+
         <Box className='cart'  paddingTop={"15px"} paddingLeft={"100px"} display={"flex"}>
         <FiShoppingCart size={"2em"} />
         < Text  color={"red"} as="b" m={"-18px"} paddingLeft={"15px"} >10</Text>
-        
+
+       
         </Box>
         
         <Box className='user'  paddingTop={"15px"} paddingLeft={"50px"} >

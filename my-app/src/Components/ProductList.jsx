@@ -5,6 +5,7 @@ import { getProduct } from "../Redux/ProductReducer/action";
 import ProductCard from "./ProductCard";
 import styles from "../styles/productlist.module.css";
 import { Box, Grid, SimpleGrid, Stack, Spinner } from "@chakra-ui/react";
+import Footer from "./Footer";
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,8 @@ const ProductList = () => {
   }, [location.search]);
   return (
     <>
+    <>
+    
       <SimpleGrid columns={[1, 1, 3]} spacing={3}>
         {loading && (
           <Spinner
@@ -49,6 +52,9 @@ const ProductList = () => {
             );
           })}
       </SimpleGrid>
+      
+    </>
+    
     </>
   );
 };

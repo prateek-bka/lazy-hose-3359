@@ -1,4 +1,4 @@
-import { Stack } from "@chakra-ui/react";
+import { Divider, Heading, Stack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -50,9 +50,9 @@ const Sidebar = () => {
 
   return (
     <>
-      <Stack direction={["column", "column", "column"]}>
+      <Stack direction={["column", "column", "column"]} w={"25%"} mt={5}>
         <Stack>
-          <h3>Filter by Rating</h3>
+          <Heading size={"md"}>Filter by Rating</Heading>
           <div>
             <input
               type="checkbox"
@@ -97,9 +97,10 @@ const Sidebar = () => {
           </div>
           <br />
         </Stack>
+        <Divider />
 
         <Stack>
-          <h3>Filter By</h3>
+          <Heading size={"md"}>Filter By </Heading>
           <div>
             <input
               type="checkbox"
@@ -107,7 +108,7 @@ const Sidebar = () => {
               onChange={handleChange}
               checked={category.includes("sofa")}
             />
-            <label>Sofa</label>
+            <label> Sofa</label>
             <br />
             <input
               type="checkbox"
@@ -115,7 +116,7 @@ const Sidebar = () => {
               onChange={handleChange}
               checked={category.includes("chair")}
             />
-            <label>Chair</label>
+            <label> Chair</label>
             <br />
             <input
               type="checkbox"
@@ -123,7 +124,7 @@ const Sidebar = () => {
               onChange={handleChange}
               checked={category.includes("table")}
             />
-            <label>Table</label>
+            <label> Table</label>
             <br />
             <input
               type="checkbox"
@@ -131,7 +132,7 @@ const Sidebar = () => {
               onChange={handleChange}
               checked={category.includes("bed")}
             />
-            <label>Bed</label>
+            <label> Bed</label>
             <br />
             <input
               type="checkbox"
@@ -139,12 +140,12 @@ const Sidebar = () => {
               onChange={handleChange}
               checked={category.includes("wardrobe")}
             />
-            <label>Wardrobe</label>
+            <label> Wardrobe</label>
           </div>
         </Stack>
-
+        <Divider />
         <Stack>
-          <h3>Sort By Price</h3>
+          <Heading size={"md"}> Sort By Price</Heading>
           <div onChange={handleSort}>
             <input
               type="radio"
@@ -152,14 +153,15 @@ const Sidebar = () => {
               value={"asc"}
               checked={order === "asc"}
             />
-            <label>Low to High</label>
+            <label> Low to High </label>
+            <br />
             <input
               type="radio"
               name="order"
               value={"desc"}
               checked={order === "desc"}
             />
-            <label>High to Low</label>
+            <label> High to Low </label>
           </div>
         </Stack>
       </Stack>

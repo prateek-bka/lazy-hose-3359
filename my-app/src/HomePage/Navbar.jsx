@@ -16,18 +16,21 @@ import {
     useDisclosure,
     Heading,
   } from '@chakra-ui/react';
+  import { FiShoppingCart } from 'react-icons/fi';
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import logo from "../assets/FurnitureTry.jpg";
+  import { FaCaretLeft, FaCaretSquareDown, FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
   
   export const Navbar=()=> {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box  width={"80%"} margin={"auto"}>
+      <Box  width={"100%"} margin={"auto"}>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
@@ -45,11 +48,13 @@ import {
             <IconButton
               onClick={onToggle}
               icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5}  />
+                
               }
+              
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
-            />
+            /><img  width={"150px"} src={logo} alt="" paddingTop={"-55px"} />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             {/* <Text
@@ -86,9 +91,10 @@ import {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={4}  margin={'auto'}>
+      <Stack direction={'row'} spacing={4}  margin={'auto'} >
+        <img  width={"150px"} src={logo} alt="" />
         {NAV_ITEMS.map((navItem) => (
-          <Box   key={navItem.label}  margin={"auto"}>
+          <Box   key={navItem.label}  margin={"auto"} paddingTop={"20px"}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
@@ -102,7 +108,8 @@ import {
                     
                     color: linkHoverColor,
                   }}>
-                  {navItem.label}
+                    <Text fontSize='md' as='b'>{navItem.label}</Text>
+                  
                 </Link>
               </PopoverTrigger>
   
@@ -118,12 +125,25 @@ import {
                     {navItem.children.map((child) => (
                       <DesktopSubNav key={child.label} {...child} />
                     ))}
+                  
                   </Stack>
                 </PopoverContent>
               )}
             </Popover>
           </Box>
         ))}
+        <Box className='cart'  paddingTop={"15px"} paddingLeft={"200px"} display={"flex"}>
+        <FiShoppingCart size={"2em"} />
+        < Text m={"-18px"}>10</Text>
+        
+        </Box>
+        
+        <Box className='user'  paddingTop={"15px"} paddingLeft={"30px"} onc>
+        {/* <FaUser size={"2em"} /> */}
+        <Button >Login</Button>
+        
+        </Box>
+        
       </Stack>
     );
   };
@@ -145,7 +165,7 @@ import {
               fontWeight={500}>
               {label}
             </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
+            <Text fontSize={'md'}>{subLabel}</Text>
           </Box>
           <Flex
             transition={'all .3s ease'}
@@ -190,7 +210,7 @@ import {
             textDecoration: 'none',
           }}>
           <Text
-            fontWeight={1000}
+           
             color={useColorModeValue('gray.600', 'gray.200')}>
             {label}
           </Text>

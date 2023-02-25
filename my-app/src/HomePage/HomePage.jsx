@@ -1,4 +1,4 @@
-import { Box, Heading, Image ,Text, Grid, GridItem,  useBreakpointValue } from "@chakra-ui/react";
+import { Box, Heading, Image ,Text, Grid, GridItem,  useBreakpointValue, SimpleGrid } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { customer_speaks, data, fry_deals, furniture_decor, recommend, room_data, shopCategories } from "./HomeData";
@@ -19,13 +19,45 @@ import Footer from "../Components/Footer";
 
 
 export const HomePage = () => {
+  const hideCarousel=useBreakpointValue({base:false,md:true,lg:true})
   return (
     <>
     
     <Box>
       <Navbar/>
-      <Box width={"90%"} m="auto" display={"flex"} gap={5} margin={"auto"}>
+      <br /><br />
+      
+        {
+        hideCarousel ?
+        (<Box width={"90%"} display={"flex"} gap={5} margin={"auto"}>
         <Box flex={2}>
+          <Carousel
+            showThumbs={false}
+            showArrows={false}
+            swipeable={true}
+            autoPlay
+            showStatus={false}
+            autoFocus={true}
+            infiniteLoop={true}
+          >
+            {data.map((ele) => {
+              return (
+                <div key={ele.id}>
+                  <Image height={"20rem"}   src={ele.src} alt="" />
+                </div>
+              );
+            })}
+          </Carousel>
+        </Box>
+        <Box flex={1} width={"20%"}>
+        <Image
+          width={"350px"}
+          height={"32rem"}
+          src="https://ii2.pepperfry.com/media/wysiwyg/banners/web_rhs_02022023_1.jpg"
+          alt=""
+        />
+      </Box>
+      </Box>) : (<Box >
           <Carousel
             showThumbs={false}
             showArrows={false}
@@ -43,17 +75,10 @@ export const HomePage = () => {
               );
             })}
           </Carousel>
-        </Box>
-        <Box flex={1} width={"20%"}>
-          <Image
-            width={"full"}
-            height={"32rem"}
-            src="https://ii2.pepperfry.com/media/wysiwyg/banners/web_rhs_02022023_1.jpg"
-            alt=""
-          />
-        </Box>
-      </Box>
-      {/* --------------------------------------------------------- */}
+        </Box>)}
+        
+      {/* </> */}
+      {/* -------------------------shop_by-------------------------------- */}
       <Box
         className="shop_by"
         width={"90%"}
@@ -63,7 +88,7 @@ export const HomePage = () => {
         <Heading mt={30} marginBottom={30} fontFamily={"sans-serif"}>
           Shop By Room
         </Heading>
-        <Box display={"flex"} gap={10}>
+        <SimpleGrid columns={[1,2,2,4]} gap={10}>
           {room_data.map((ele) => {
             return (
               <div key={ele.id}>
@@ -74,11 +99,11 @@ export const HomePage = () => {
               </div>
             );
           })}
-        </Box>
+        </SimpleGrid>
       </Box>
-      {/* -------------------------------------- */}
+      {/* -----------------fry_deals--------------------- */}
       <Box
-        className="shop_by"
+        className="fry_deals"
         width={"90%"}
         margin={"auto"}
         textAlign={"center"}
@@ -86,7 +111,7 @@ export const HomePage = () => {
         <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
           What The Fry Deals
         </Heading>
-        <Box display={"flex"} gap={10} textAlign={"start"}>
+        <SimpleGrid columns={[1,2,4,4]} gap={10} textAlign={"start"}>
           {fry_deals.map((ele) => {
             return (
               <div key={ele.id}>
@@ -96,9 +121,10 @@ export const HomePage = () => {
               </div>
             );
           })}
-        </Box>
+        </SimpleGrid>
       </Box>
       {/* ----------------------------Inspire and Get-Inspired---------------------------------- */}
+      
       <Box
         className="inspire_get"
         width={"90%"}
@@ -143,9 +169,9 @@ export const HomePage = () => {
         textAlign={"center"}
       >
         <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
-          What The Fry Deals
+        Trends In Furniture And Decor
         </Heading>
-        <Box display={"flex"} gap={20} textAlign={"start"}>
+        <SimpleGrid columns={[1,2,2,3]} gap={20} textAlign={"start"}>
           {furniture_decor.map((ele) => {
             return (
               <div key={ele.id}>
@@ -155,7 +181,7 @@ export const HomePage = () => {
               </div>
             );
           })}
-        </Box>
+        </SimpleGrid>
       </Box>
       {/* ----------------------------Customers Speak */}
       <Box
@@ -167,7 +193,7 @@ export const HomePage = () => {
         <Heading mt={30} marginBottom={30} textAlign={"start"} fontFamily={"sans-serif"}>
         Customers Speak
         </Heading>
-        <Box display={"flex"} gap={10} textAlign={"start"}>
+        <SimpleGrid columns={[1,2,2,3]} gap={10} textAlign={"start"}>
           {customer_speaks.map((ele) => {
             return (
               <div key={ele.id}>
@@ -179,7 +205,7 @@ export const HomePage = () => {
               </div>
             );
           })}
-        </Box>
+        </SimpleGrid>
       </Box>
       {/* ------------------------------------------Recommended for you */}
       <Box
@@ -197,6 +223,7 @@ export const HomePage = () => {
 
       <Box width={"90%"} margin={"auto"}>
       <Box >
+        
         <Swiper
         
               slidesPerView={6}
@@ -217,6 +244,7 @@ export const HomePage = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+            
         </Box>
       </Box>
     </Box>

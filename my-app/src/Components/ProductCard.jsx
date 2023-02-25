@@ -16,7 +16,7 @@ const ProductCard = ({ card }) => {
   const toast=useToast()
   const dispatch=useDispatch()
   const {isLoading,isError,cart_products}=useSelector((store)=>store.cartReducer)
-  console.log(isLoading,isError,cart_products)
+  
   const handleCart=async (card)=>{
     dispatch(getcartRequest())
    await axios.post(` http://localhost:8080/card-data`,card).then((res)=>{

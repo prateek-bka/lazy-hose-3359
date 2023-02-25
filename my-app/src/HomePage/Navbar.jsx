@@ -26,7 +26,7 @@ import {
   import logo from "../assets/FurnitureTry.jpg";
   import { FaCaretLeft, FaCaretSquareDown, FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
   import { useSelector } from 'react-redux';
-  // import {Link} from 'react-router-dom'
+  import {useNavigate} from "react-router-dom"
   export const Navbar=()=> {
     const { isOpen, onToggle } = useDisclosure();
     return (
@@ -86,12 +86,16 @@ import {
   }
   
   const DesktopNav = () => {
+    const navigate=useNavigate()
     const linkColor = useColorModeValue('black.1000', 'black.200');
     const linkHoverColor = useColorModeValue('black.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
     const {isLoading,isError,cart_products}=useSelector((store)=>store.cartReducer);
     const number_of_item=cart_products.reduce((acc,current)=>acc+current.quantity,0)
-    console.log(isLoading,isError,cart_products)
+    // console.log(isLoading,isError,cart_products)
+    const handleNavigation=()=>{
+           navigate("/cart")
+    }
     return (
       <Stack direction={'row'} spacing={4}  margin={'auto'} >
         <img  width={"150px"} src={logo} alt="" />
@@ -135,9 +139,14 @@ import {
           </Box>
         ))}
 
-        <Box className='cart'  paddingTop={"15px"} paddingLeft={"100px"} display={"flex"}>
-        <FiShoppingCart size={"2em"} />
-        < Text  color={"red"} as="b" m={"-18px"} paddingLeft={"15px"} >10</Text>
+       
+        <Box className='cart'  paddingTop={"15px"} paddingLeft={"100px"} display={"flex"} onClick={handleNavigation} >
+
+        
+        <FiShoppingCart size={"2em"} onClick={handleNavigation}/>
+
+        
+        < Text  color={"red"} as="b" m={"-18px"} paddingLeft={"15px"} >{number_of_item}</Text>
 
        
         </Box>
@@ -258,12 +267,12 @@ import {
           {
             label: 'Explore Design Work',
             subLabel: 'Trending Design to inspire you',
-            href: '#',
+            href: '/product',
           },
           {
             label: 'Home Decor',
             subLabel: 'Up-and-coming Designers',
-            href: '#',
+            href:"/product",
           },
         ],
       },
@@ -274,12 +283,12 @@ import {
           {
             label: 'Explore Design Work',
             subLabel: 'Trending Design to inspire you',
-            href: '#',
+            href: "/product",
           },
           {
             label: 'Home Decor',
             subLabel: 'Up-and-coming Designers',
-            href: '#',
+            href: '/product',
           },
         ],
       },
@@ -290,12 +299,12 @@ import {
           {
             label: 'Explore Design Work',
             subLabel: 'Trending Design to inspire you',
-            href: '#',
+            href: '/product',
           },
           {
             label: 'Home Decor',
             subLabel: 'Up-and-coming Designers',
-            href: '#',
+            href: '/product',
           },
         ],
       },
@@ -305,30 +314,64 @@ import {
           {
             label: 'Explore Design Work',
             subLabel: 'Trending Design to inspire you',
-            href: '#',
+            href: '/product',
           },
           {
             label: 'Home Decor',
             subLabel: 'Up-and-coming Designers',
-            href: '#',
+            href: '/product',
           },
         ],
       },
+      
       {
-        label: 'Kitchen & Dining',
+        label: 'Beds & Table',
         children: [
           {
             label: 'Explore Design Work',
             subLabel: 'Trending Design to inspire you',
-            href: '#',
+            href: "/product",
           },
           {
             label: 'Home Decor',
             subLabel: 'Up-and-coming Designers',
-            href: '#',
+            href: '/product',
           },
         ],
       },
+
+      {
+        label: 'Sofa',
+        children: [
+          {
+            label: 'Explore Design Work',
+            subLabel: 'Trending Design to inspire you',
+            href: "/product",
+          },
+          {
+            label: 'Home Decor',
+            subLabel: 'Up-and-coming Designers',
+            href: '/product',
+          },
+        ],
+      },
+
+      {
+        label: 'Wardrobe',
+        children: [
+          {
+            label: 'Explore Design Work',
+            subLabel: 'Trending Design to inspire you',
+            href: "/product",
+          },
+          {
+            label: 'Home Decor',
+            subLabel: 'Up-and-coming Designers',
+            href: '/product',
+          },
+        ],
+      },
+
       {
         label: 'Furnishing',
         children: [
@@ -344,34 +387,5 @@ import {
           },
         ],
       },
-      {
-        label: 'Appliances',
-        children: [
-          {
-            label: 'Explore Design Work',
-            subLabel: 'Trending Design to inspire you',
-            href: '#',
-          },
-          {
-            label: 'Home Decor',
-            subLabel: 'Up-and-coming Designers',
-            href: '#',
-          },
-        ],
-      },
-      {
-        label: 'Pets',
-        children: [
-          {
-            label: 'Explore Design Work',
-            subLabel: 'Trending Design to inspire you',
-            href: '#',
-          },
-          {
-            label: 'Home Decor',
-            subLabel: 'Up-and-coming Designers',
-            href: '#',
-          },
-        ],
-      },
+      
   ];

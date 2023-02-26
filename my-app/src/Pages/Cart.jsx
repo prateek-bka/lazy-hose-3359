@@ -7,10 +7,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
 import { getcartSuccess } from "../Redux/CartReducer/action";
 import styled from "styled-components";
-import { useStatStyles } from "@chakra-ui/react";
+import { Button, useStatStyles } from "@chakra-ui/react";
 import { Toast, useToast } from "@chakra-ui/react";
 import { FiTrash2 } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 export const Cart = () => {
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
+
   const toast = useToast();
   const { isLoading, isError, cart_products } = useSelector(
     (store) => store.cartReducer
@@ -98,14 +105,14 @@ export const Cart = () => {
           <div className="cart-body">
             <img src={ele.img} alt="" width="15%" />
             <button
-              className="inc"
+              className="inc_btn"
               disabled={ele.quantity <= 1 ? "true" : false}
               onClick={() => handleDecrese(ele.id)}
             >
               -
             </button>
             <button className="inc">Quantity : {ele.quantity}</button>
-            <button className="inc" onClick={() => handleIncrease(ele.id)}>
+            <button className="inc_btn" onClick={() => handleIncrease(ele.id)}>
               +
             </button>
             <button className="inc">Price : {ele.price}</button>
@@ -117,18 +124,22 @@ export const Cart = () => {
             </button>
             <button
               className="inc"
-              style={{ backgroundColor: "#008CBA", color: "whitesmoke" }}
+              style={{
+                backgroundColor: "#008CBA",
+                color: "whitesmoke",
+                padding: "1%",
+              }}
             >
-              Total:{ele.price * ele.quantity}
+              Total: {ele.price * ele.quantity}
             </button>
             <hr />
           </div>
         ))}
       <div className="total">
-        <h2>Total-Ammount</h2>
-        <hr />
-        <h3 style={{ marginBottom: "20px" }}> ₹{total_value}</h3>
-        <button className="inc">Checkout</button>
+        <h3>Total-Amount : ₹ {total_value}</h3>
+        <button className="checkout_button" onClick={handleCheckout}>
+          Proceed to Checkout
+        </button>
       </div>
     </div>
   );

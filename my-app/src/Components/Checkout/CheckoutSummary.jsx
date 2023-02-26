@@ -25,7 +25,10 @@ const CheckoutSummary = () => {
       .catch((err) => console.log("error fetching cart data"));
   }, []);
 
-  const total = cartData.reduce((acc, item) => acc + item.price, 0);
+  const total = cartData.reduce(
+    (acc, current) => acc + current.quantity * current.price,
+    0
+  );
 
   return (
     <>
@@ -38,7 +41,12 @@ const CheckoutSummary = () => {
         {cartData.map((e) => {
           return (
             <>
-              <HStack w={"450px"} p={"1"} alignItems="center">
+              <HStack
+                w={"450px"}
+                p={"1"}
+                alignItems="center"
+                justifyItems="center"
+              >
                 <Image w="75px" src={e.img} alt={e.name} />
                 <Heading
                   w="200px"
@@ -48,6 +56,9 @@ const CheckoutSummary = () => {
                 >
                   {e.name}
                 </Heading>
+                <Text p={3} textAlign={"center"}>
+                  Quantity: {e.quantity}
+                </Text>
                 <Heading w="100px" color="purple" size="md">
                   ₹ {e.price}
                 </Heading>

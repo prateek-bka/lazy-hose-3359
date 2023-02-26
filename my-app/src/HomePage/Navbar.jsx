@@ -17,16 +17,19 @@ import {
     Heading,
   } from '@chakra-ui/react';
   import { FiShoppingCart } from 'react-icons/fi';
+  import { useAuth0 } from "@auth0/auth0-react";
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import axios from 'axios';
   import logo from "../assets/FurnitureTry.jpg";
   import { FaCaretLeft, FaCaretSquareDown, FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
   import { useSelector } from 'react-redux';
   import {useNavigate} from "react-router-dom"
+import { useEffect, useState } from 'react';
   export const Navbar=()=> {
     const { isOpen, onToggle } = useDisclosure();
     return (
@@ -92,10 +95,13 @@ import {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
     const {isLoading,isError,cart_products}=useSelector((store)=>store.cartReducer);
     const number_of_item=cart_products.reduce((acc,current)=>acc+current.quantity,0)
-    // console.log(isLoading,isError,cart_products)
+    const [data,setData]=useState([])
+     
     const handleNavigation=()=>{
            navigate("/cart")
     }
+    const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
+  
     return (
       <Stack direction={'row'} spacing={4}  margin={'auto'} >
         <img  width={"150px"} src={logo} alt="" />
@@ -146,14 +152,16 @@ import {
         <FiShoppingCart size={"2em"} onClick={handleNavigation}/>
 
         
-        < Text  color={"red"} as="b" m={"-18px"} paddingLeft={"15px"} >{number_of_item}</Text>
-
-       
+        < Text  color={"red"} as="b" m={"-15px"} paddingLeft={"15px"} >{number_of_item}</Text>
+               
+        {isAuthenticated&& <div style={{margin:"auto",marginLeft:"60px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"75%"}}/></div>}
+        {/* {isAuthenticated && <img  width={"50px"} src={user.picture} alt="" />} */}
         </Box>
         
         <Box className='user'  paddingTop={"15px"} paddingLeft={"50px"} >
-        {/* <FaUser size={"2em"} /> */}
-        <Button colorScheme={"blackAlpha"} >Login</Button>
+        
+        {isAuthenticated ? <Button colorScheme={"blackAlpha"} onClick={() => logout({ returnTo: window.location.origin })} >Logout</Button>:<Button colorScheme={"blackAlpha"} onClick={() => loginWithRedirect()}>Login</Button>}
+        
         
         </Box>
         

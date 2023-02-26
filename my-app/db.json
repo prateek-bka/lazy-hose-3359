@@ -331,26 +331,5 @@
       "quantity": 1
     }
   ],
-  "card-data": [
-    {
-      "id": 3,
-      "name": "Obeisance Fabric Sofa",
-      "price": 35785,
-      "img": "https://ii1.pepperfry.com/media/catalog/product/r/o/494x544/romina-3-seater--lhs-sectional-sofa-in-navy-blue-colour---casacraft-by-pepperfry-romina-3-seater--lh-l84c6x.jpg",
-      "category": "sofa",
-      "rating": 4,
-      "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 4
-    },
-    {
-      "id": 4,
-      "name": "Azalea Velvet 2 Seater Sofa",
-      "price": 38750,
-      "img": "https://ii2.pepperfry.com/media/catalog/product/a/z/494x544/azalea-2-seater-velvet-sofa-in-berry-red-colour-by-amberville-azalea-2-seater-velvet-sofa-in-berry-r-8as4rx.jpg",
-      "category": "sofa",
-      "rating": 5,
-      "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
-    }
-  ]
+  "card-data": []
 }

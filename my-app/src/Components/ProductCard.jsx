@@ -14,7 +14,7 @@ import {
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   addcartProduct,
   getcartFailure,
@@ -24,7 +24,7 @@ import {
 import axios from "axios";
 
 const ProductCard = ({ card }) => {
-
+  const {isAuthenticated} = useAuth0(); 
   const toast = useToast();
   const dispatch = useDispatch();
   const { isLoading, isError, cart_products } = useSelector(
@@ -34,30 +34,43 @@ const ProductCard = ({ card }) => {
   // console.log(isLoading, isError, cart_products);
 
   const handleCart = async (card) => {
-    dispatch(getcartRequest());
-    await axios
-      .post(` http://localhost:8080/card-data`, card)
-      .then((res) => {
-        dispatch(addcartProduct(res.data));
+      if(isAuthenticated){
+        dispatch(getcartRequest());
+        await axios
+          .post(` http://localhost:8080/card-data`, card)
+          .then((res) => {
+            dispatch(addcartProduct(res.data));
+            toast({
+              title: "Great Choice",
+              description: "Products added Successfully",
+              status: "success",
+              duration: 4000,
+              isClosable: true,
+            });
+    
+          })
+          .catch(() => {
+            dispatch(getcartFailure());
+            toast({
+              title: "Already in cart 😍",
+              description: "Go to cart and make it yours",
+              status: "info",
+              duration: 4000,
+              isClosable: true,
+            });
+          });
+      }
+      else{
         toast({
-          title: "Great Choice",
-          description: "Products added Successfully",
-          status: "success",
+          title: "Sorry",
+          description: "First Login your Self ",
+          status: "error",
           duration: 4000,
           isClosable: true,
         });
 
-      })
-      .catch(() => {
-        dispatch(getcartFailure());
-        toast({
-          title: "Already in cart 😍",
-          description: "Go to cart and make it yours",
-          status: "info",
-          duration: 4000,
-          isClosable: true,
-        });
-      });
+      }
+    
   };
 
   return (

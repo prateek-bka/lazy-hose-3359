@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { customer_speaks, data, fry_deals, furniture_decor, recommend, room_data, shopCategories } from "./HomeData";
 
-
+import { useAuth0 } from "@auth0/auth0-react";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +19,7 @@ import Footer from "../Components/Footer";
 
 
 export const HomePage = () => {
+  
   const hideCarousel=useBreakpointValue({base:false,md:true,lg:true})
   return (
     <>

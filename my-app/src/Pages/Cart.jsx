@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 // import { getcartSuccess } from '../Redux/CartReducer/action'
+import { useAuth0 } from "@auth0/auth0-react";
 import { getcartSuccess } from '../Redux/CartReducer/action'
 import styled from "styled-components";
 import { useStatStyles } from '@chakra-ui/react'
@@ -12,6 +13,7 @@ import { FiTrash2 } from "react-icons/fi";
 export const Cart = () => {
   const toast=useToast()
   const {isLoading,isError,cart_products}=useSelector((store)=>store.cartReducer);
+  const {isAuthenticated} = useAuth0(); 
   //     const number_of_item=cart_products.reduce((acc,current)=>acc+current.quantity,0)
       // console.log(number_of_item)
       const total_value=cart_products.reduce((acc,current)=>acc+current.quantity*current.price,0)
@@ -20,6 +22,7 @@ export const Cart = () => {
       const handleChange=()=>{
          setChange((prev)=>!prev)
       }
+
       const dispatch=useDispatch()
       useEffect(()=>{
         axios.get(`http://localhost:8080/card-data`).then((res)=>{
@@ -53,6 +56,12 @@ export const Cart = () => {
        await axios.patch(`http://localhost:8080/card-data/${id}`,quantity).then(()=>handleChange())
       }
       // style={{border:"1px solid gray",display:"flex",gap:"50px"}}
+      if(cart_products.length==0 && isAuthenticated==true){
+        return  <div style={{display:"flex",justifyContent:"center",margin:"auto",width:"100%",height:"500px"}}><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" alt="" /></div>
+      }
+      if(!isAuthenticated){
+        return <div><h2>You are not Logged</h2></div>
+      }
   return (
     <div className='cart-container'>
          {cart_products.length>0 && cart_products.map((ele)=>(

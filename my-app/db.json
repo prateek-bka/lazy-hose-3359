@@ -331,5 +331,16 @@
       "quantity": 1
     }
   ],
-  "card-data": []
+  "card-data": [
+    {
+      "id": 9,
+      "name": "Indus Pure Sheesham Wood 1 Seater Sofa",
+      "price": 84599,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/i/n/494x544/indus-sheesham-wood-1-seater-sofa-in-provincial-teak-finish---by-woodsworth-indus-sheesham-wood-1-se-gkfsxq.jpg",
+      "category": "sofa",
+      "rating": 2,
+      "ratingImage": "⭐⭐",
+      "quantity": 1
+    }
+  ]
 }

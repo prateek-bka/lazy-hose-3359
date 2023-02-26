@@ -20,7 +20,7 @@ const CheckoutSummary = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/card-data`)
+      .get(`https://confused-cape-dog.cyclic.app/card-data`)
       .then((res) => setCartData(res.data))
       .catch((err) => console.log("error fetching cart data"));
   }, []);

@@ -333,16 +333,6 @@
   ],
   "card-data": [
     {
-      "id": 9,
-      "name": "Indus Pure Sheesham Wood 1 Seater Sofa",
-      "price": 84599,
-      "img": "https://ii1.pepperfry.com/media/catalog/product/i/n/494x544/indus-sheesham-wood-1-seater-sofa-in-provincial-teak-finish---by-woodsworth-indus-sheesham-wood-1-se-gkfsxq.jpg",
-      "category": "sofa",
-      "rating": 2,
-      "ratingImage": "⭐⭐",
-      "quantity": 1
-    },
-    {
       "id": 2,
       "name": "Obeisance Fabric Sofa",
       "price": 15750,
@@ -353,14 +343,64 @@
       "quantity": 1
     },
     {
-      "id": 3,
-      "name": "Obeisance Fabric Sofa",
-      "price": 35785,
-      "img": "https://ii1.pepperfry.com/media/catalog/product/r/o/494x544/romina-3-seater--lhs-sectional-sofa-in-navy-blue-colour---casacraft-by-pepperfry-romina-3-seater--lh-l84c6x.jpg",
+      "id": 7,
+      "name": "Orting Sheesham Wood 2 Seater Sofa",
+      "price": 29510,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/o/r/494x544/orting-solid-wood-2-seater-sofa-in-honey-oak-finish-by-woodsworth-orting-solid-wood-2-seater-sofa-in-xkegx9.jpg",
       "category": "sofa",
+      "rating": 2,
+      "ratingImage": "⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "name": "Cacelia Fabric 3 Seater Sofa",
+      "price": 129510,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/c/a/494x544/cacelia-3-seater-sofa-in-blue-colour-by-casacraft-cacelia-3-seater-sofa-in-blue-colour-by-casacraft-rrrpfa.jpg",
+      "category": "sofa",
+      "rating": 5,
+      "ratingImage": "⭐⭐⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "name": "Aylesbury Teak Wood Arm Chair",
+      "price": 33550,
+      "img": "https://ii1.pepperfry.com/media/catalog/product/a/y/494x544/aylesbury-teak-wood-arm-chair-in-rustic-teak-finish-by-amberville-aylesbury-teak-wood-arm-chair-in-r-wrkk7s.jpg",
+      "category": "chair",
+      "rating": 3,
+      "ratingImage": "⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 25,
+      "name": "Walnut Finish Queen Size Bed",
+      "price": 26750,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/t/o/494x544/tomoko-queen-size-upholstered-bed-with-storage-in-bronze-walnut-colour-by-mintwud-tomoko-queen-size--bd81i2.jpg",
+      "category": "bed",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 2
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "name": "Sheesham Wood Table",
+      "price": 4580,
+      "img": "https://ii2.pepperfry.com/media/catalog/product/h/a/494x544/hayami-coffee-table-in-brown-oak-finish-by-mintwud-hayami-coffee-table-in-brown-oak-finish-by-mintwu-9stols.jpg",
+      "category": "table",
+      "rating": 5,
+      "ratingImage": "⭐⭐⭐⭐⭐",
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "name": "Acklom Sheesham Wood Rocking Chair",
+      "price": 28110,
+      "img": "https://ii3.pepperfry.com/media/catalog/product/a/c/494x544/acklom-solid-wood-rocking-chair-in-honey-oak-finish-by-amberville-acklom-solid-wood-rocking-chair-in-3zf7yn.jpg",
+      "category": "chair",
+      "rating": 4,
+      "ratingImage": "⭐⭐⭐⭐",
+      "quantity": 1
     }
   ]
 }

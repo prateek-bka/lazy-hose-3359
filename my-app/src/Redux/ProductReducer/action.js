@@ -19,7 +19,7 @@ export const productFailure = () => {
 export const getProduct = (param) => (dispatch) => {
   dispatch(productRequest());
   return axios
-    .get("http://localhost:8080/products", param)
+    .get("https://confused-cape-dog.cyclic.app/products", param)
     .then((res) => {
       dispatch(productSuccess(res.data));
       console.log(res.data);

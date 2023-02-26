@@ -38,36 +38,42 @@ export const Cart = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/card-data`)
+      .get(`https://confused-cape-dog.cyclic.app/card-data`)
       .then((res) => {
         dispatch(getcartSuccess(res.data));
       })
       .catch((err) => console.log("ERR-", err));
   }, [change]);
   const handleRemove = async (id) => {
-    await axios.delete(`http://localhost:8080/card-data/${id}`).then(() => {
-      handleChange();
-      toast({
-        description: "Items Romoved",
-        status: "success",
-        duration: 4000,
-        isClosable: true,
+    await axios
+      .delete(`https://confused-cape-dog.cyclic.app/card-data/${id}`)
+      .then(() => {
+        handleChange();
+        toast({
+          description: "Items Romoved",
+          status: "success",
+          duration: 4000,
+          isClosable: true,
+        });
       });
-    });
   };
   const handleIncrease = async (id) => {
-    let res = await axios.get(`http://localhost:8080/card-data/${id}`);
+    let res = await axios.get(
+      `https://confused-cape-dog.cyclic.app/card-data/${id}`
+    );
 
     let quantity = { quantity: res.data.quantity + 1 };
     axios
-      .patch(`http://localhost:8080/card-data/${id}`, quantity)
+      .patch(`https://confused-cape-dog.cyclic.app/card-data/${id}`, quantity)
       .then(() => handleChange());
   };
   const handleDecrese = async (id) => {
-    let res = await axios.get(`http://localhost:8080/card-data/${id}`);
+    let res = await axios.get(
+      `https://confused-cape-dog.cyclic.app/card-data/${id}`
+    );
     let quantity = { quantity: res.data.quantity - 1 };
     await axios
-      .patch(`http://localhost:8080/card-data/${id}`, quantity)
+      .patch(`https://confused-cape-dog.cyclic.app/card-data/${id}`, quantity)
       .then(() => handleChange());
   };
   // style={{border:"1px solid gray",display:"flex",gap:"50px"}}

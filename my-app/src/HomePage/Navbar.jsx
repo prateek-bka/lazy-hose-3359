@@ -104,7 +104,7 @@ import { useEffect, useState } from 'react';
   
     return (
       <Stack direction={'row'} spacing={4}  margin={'auto'} >
-        <img  width={"150px"} src={logo} alt="" />
+        <img  width={"150px"} src={logo} alt=""  />
         {NAV_ITEMS.map((navItem) => (
           <Box   key={navItem.label}  margin={"auto"} paddingTop={"20px"}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -146,7 +146,7 @@ import { useEffect, useState } from 'react';
         ))}
 
        
-        <Box className='cart'  paddingTop={"15px"} paddingLeft={"100px"} display={"flex"} onClick={handleNavigation} >
+        <Box className='cart'  paddingTop={"15px"} paddingLeft={"0px"} display={"flex"} onClick={handleNavigation} >
 
         
         <FiShoppingCart size={"2em"} onClick={handleNavigation}/>
@@ -154,7 +154,7 @@ import { useEffect, useState } from 'react';
         
         < Text  color={"red"} as="b" m={"-15px"} paddingLeft={"15px"} >{number_of_item}</Text>
                
-        {isAuthenticated&& <div style={{margin:"auto",marginLeft:"60px"}}><img src={user.picture} alt="logo" style={{backgroundColor:"white",borderRadius:"50%",width:"75%"}}/></div>}
+        {isAuthenticated&& <div style={{margin:"auto",marginLeft:"80px"} }><img src={user.picture} alt="logo"style={{backgroundColor:"white",borderRadius:"50%",width:"50%",marginTop:"-10px"}}/></div>}
         {/* {isAuthenticated && <img  width={"50px"} src={user.picture} alt="" />} */}
         </Box>
         

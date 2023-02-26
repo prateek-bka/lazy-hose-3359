@@ -24,10 +24,12 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import axios from 'axios';
   import logo from "../assets/FurnitureTry.jpg";
   import { FaCaretLeft, FaCaretSquareDown, FaCartPlus, FaPeopleCarry, FaUser,  } from "react-icons/fa";
   import { useSelector } from 'react-redux';
   import {useNavigate} from "react-router-dom"
+import { useEffect, useState } from 'react';
   export const Navbar=()=> {
     const { isOpen, onToggle } = useDisclosure();
     return (
@@ -93,12 +95,13 @@ import {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
     const {isLoading,isError,cart_products}=useSelector((store)=>store.cartReducer);
     const number_of_item=cart_products.reduce((acc,current)=>acc+current.quantity,0)
-    // console.log(isLoading,isError,cart_products)
+    const [data,setData]=useState([])
+     
     const handleNavigation=()=>{
            navigate("/cart")
     }
     const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0(); 
-  console.log(isAuthenticated)
+  
     return (
       <Stack direction={'row'} spacing={4}  margin={'auto'} >
         <img  width={"150px"} src={logo} alt="" />

@@ -24,35 +24,46 @@
 
 <h3>FurnitureTry Homepage Screenshot</h3>
 
-![FurnitureTry Homepage Screenshot](https://i.ibb.co/PYKXcbZ/Homepage-1.png)
+<img width="951" alt="Homepage_1" src="https://user-images.githubusercontent.com/96651559/221482831-dd15e5a0-a5ec-4b2c-99ae-7165f100c378.PNG">
 
 <br />
+<img width="949" alt="Homepage_2" src="https://user-images.githubusercontent.com/96651559/221482932-11795882-e8d7-45a7-97da-c879296453e8.PNG">
 
-![FurnitureTry Homepage Screenshot](https://i.ibb.co/wYwcTd5/Homepage-2.png)
+
 
 <br />
 <h3>FurnitureTry Signup Screenshot</h3>
 
-![FurnitureTry Signup Screenshot](https://i.ibb.co/7Rr7Fqz/Login-1.png)
+<img width="949" alt="Login_1" src="https://user-images.githubusercontent.com/96651559/221482984-51f200ea-c13b-4c23-8cf7-08f594c65ebf.PNG">
+
 
 <br />
 <h3>FurnitureTry Product Page Screenshot</h3>
 
-![FurnitureTry Product Page Screenshot](https://i.ibb.co/S0r1BLg/Product-Page-1.png)
+
+<img width="953" alt="ProductPage_1" src="https://user-images.githubusercontent.com/96651559/221483009-8bd8256a-4d29-49d9-8912-3e18c9081a7a.PNG">
 
 <br />
 
 ![FurnitureTry Product Page Screenshot](https://i.ibb.co/vd6N2JC/Product-Page-2.png)
 
 <br />
+
+<img width="949" alt="ProductPage_2" src="https://user-images.githubusercontent.com/96651559/221483063-372fdee3-d3d6-485b-b8d4-899503972e26.PNG">
+
+
+<br />
 <h3>FurnitureTry Cart Page Screenshot</h3>
 
-![FurnitureTry Cart Page Screenshot](https://i.ibb.co/VTnggTZ/Cart-1.png)
+<img width="955" alt="Cart_1" src="https://user-images.githubusercontent.com/96651559/221483099-42da2850-b496-4641-8c0e-2521a6624c51.PNG">
+
 
 <br />
 <h3>FurnitureTry Checkout Page Screenshot</h3>
 
-![FurnitureTry Checkout Page Screenshot](https://i.ibb.co/ckN5zWD/Checkout-1.png)
+<img width="948" alt="Checkout_1" src="https://user-images.githubusercontent.com/96651559/221483130-138face5-350f-4f07-967c-7ecd5565a039.PNG">
+
+
 <br />
 <br />
 
@@ -76,7 +87,7 @@
 <br />
 
 <h3>Member 2: <b>Sameer Kumar Padhy (fw20_1255)</b> </h3>
-<a href="https://linkedin.com/in/">
+<a href="https://linkedin.com/in/sameer-kumar-padhy-4019ba131">
         <img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="" />
 </a>
 <a title="sameerpadhy50@gmail.com" href="mailto:sameerpadhy50@gmail.com">

@@ -133,7 +133,7 @@ const DesktopNav = () => {
               <Link
                 margin={"auto"}
                 p={2}
-                href={navItem.href ?? "/product"}
+                href={navItem.href ?? "/*"}
                 fontSize={"sm"}
                 fontWeight={1500}
                 color={linkColor}
@@ -321,9 +321,16 @@ const MobileNavItem = ({ label, children, href }) => {
   );
 };
 
+
+
+//list of items
+
 const NAV_ITEMS = [
   {
     label: "Furniture",
+
+    
+    href:"/product",
     children: [
       {
         label: "Office Furniture",
@@ -344,12 +351,12 @@ const NAV_ITEMS = [
       {
         label: "King Size Beds",
         subLabel: "Trending Design to inspire you",
-        href: "/product",
+        href: "/*",
       },
       {
         label: "Queen Size Beds",
         subLabel: "Up-and-coming Designers",
-        href: "/product",
+        href: "/*",
       },
     ],
   },
@@ -360,12 +367,12 @@ const NAV_ITEMS = [
       {
         label: "Wall Art",
         subLabel: "Trending Design to inspire you",
-        href: "/product",
+        href: "/*",
       },
       {
         label: "Vases",
         subLabel: "Up-and-coming Designers",
-        href: "/product",
+        href: "/*",
       },
     ],
   },
@@ -375,12 +382,12 @@ const NAV_ITEMS = [
       {
         label: "Outdoor Lights",
         subLabel: "Trending Design to inspire you",
-        href: "/product",
+        href: "/*",
       },
       {
         label: "Wall Lights",
         subLabel: "Up-and-coming Designers",
-        href: "/product",
+        href: "/*",
       },
     ],
   },
@@ -407,12 +414,12 @@ const NAV_ITEMS = [
       {
         label: "3 Seater Sofas",
         subLabel: "Trending Design to inspire you",
-        href: "/product",
+        href: "/*",
       },
       {
         label: "2 Seater Sofas",
         subLabel: "Up-and-coming Designers",
-        href: "/product",
+        href: "/*",
       },
     ],
   },
@@ -423,12 +430,12 @@ const NAV_ITEMS = [
       {
         label: "2 Door",
         subLabel: "Trending Design to inspire you",
-        href: "/product",
+        href: "/*",
       },
       {
         label: "Sliding",
         subLabel: "Up-and-coming Designers",
-        href: "/product",
+        href: "/*",
       },
     ],
   },
@@ -439,12 +446,12 @@ const NAV_ITEMS = [
       {
         label: "Essentials",
         subLabel: "Trending Design to inspire you",
-        href: "/product",
+        href: "/*",
       },
       {
         label: "Gift Sets",
         subLabel: "Up-and-coming Designers",
-        href: "/product",
+        href: "/*",
       },
     ],
   },

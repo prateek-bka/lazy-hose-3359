@@ -6,6 +6,7 @@ import Checkout from "./Checkout/Checkout";
 
 import ProductDetails from "./ProductDetails";
 import ProductPage from "./ProductPage";
+import { Error } from "./Error";
 
 const MainRoutes = () => {
   return (
@@ -15,6 +16,9 @@ const MainRoutes = () => {
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="*" element={<Error/>} />
+
+      
 
     </Routes>
   );

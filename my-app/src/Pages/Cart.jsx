@@ -7,7 +7,7 @@ import { getcartSuccess,increse ,decrese} from '../Redux/CartReducer/action'
 import { useAuth0 } from "@auth0/auth0-react";
 import { cartitemdelete } from "../Redux/CartReducer/action";
 import styled from "styled-components";
-import { Button, useStatStyles } from "@chakra-ui/react";
+import { Box, Button, Image, useStatStyles } from "@chakra-ui/react";
 import { Toast, useToast } from "@chakra-ui/react";
 import { FiTrash2 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
@@ -65,30 +65,32 @@ export const Cart = () => {
     );
   }
   return (
-    <div className="cart-container">
+    <Box display={"grid"} justifyContent={"center"} alignItems={"center"} gap={5}>
       {cart_products.length > 0 &&
         cart_products.map((ele) => (
-          <div className="cart-body">
-            <img src={ele.img} alt="" width="15%" />
-            <button
-              className="inc_btn"
+          <Box display={{base:"grid",lg:"flex"}}  justifyContent={"center"} alignItems={"center"} gap={2}>
+            <Image display="block" margin={"auto"} src={ele.img} alt="" width={{base:"60%",md:"20%"}} />
+            <Button
+            colorScheme={"facebook"}
               disabled={ele.quantity <= 1 ? "true" : false}
               onClick={() => dispatch(decrese(ele.id))}
             >
               -
-            </button>
-            <button className="inc">Quantity : {ele.quantity}</button>
-            <button className="inc_btn" onClick={() => dispatch(increse(ele.id))}>
+            </Button>
+            <Button>Quantity : {ele.quantity}</Button>
+            <Button
+            colorScheme={"facebook"}
+            onClick={() => dispatch(increse(ele.id))}>
               +
-            </button>
-            <button className="inc">Price : {ele.price}</button>
-            <button
-              style={{ color: "green" }}
+            </Button>
+            <Button >Price : {ele.price}</Button>
+            <Button
+            colorScheme={"red"}
               onClick={() => dispatch(cartitemdelete(ele.id))}
             >
               <FiTrash2 size={25} />
-            </button>
-            <button
+            </Button>
+            <Button
               className="inc"
               style={{
                 backgroundColor: "#008CBA",
@@ -97,16 +99,16 @@ export const Cart = () => {
               }}
             >
               Total: {ele.price * ele.quantity}
-            </button>
+            </Button>
             <hr />
-          </div>
+          </Box>
         ))}
-      <div className="total">
-        <h3>Total-Amount : ₹ {total_value}</h3>
-        <button className="checkout_button" onClick={handleCheckout}>
+      <Box mb={5} className="total">
+        <h4>Total-Amount : ₹ {total_value}</h4>
+        <Button colorScheme={"whatsapp"} onClick={handleCheckout}>
           Proceed to Checkout
-        </button>
-      </div>
-    </div>
+        </Button>
+      </Box>
+    </Box>
   );
 };

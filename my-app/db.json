@@ -228,7 +228,9 @@
       "category": "table",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 6,
+      "dislike": 4
     },
     {
       "id": 24,

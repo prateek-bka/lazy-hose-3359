@@ -331,6 +331,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Furniture",
+     href:"/product",
     children: [
       {
         label: "Office Furniture",
@@ -347,6 +348,7 @@ const NAV_ITEMS = [
 
   {
     label: "Beds",
+     href:"/product",
     children: [
       {
         label: "King Size Beds",
@@ -363,6 +365,7 @@ const NAV_ITEMS = [
 
   {
     label: "Home Decor",
+     href:"/product",
     children: [
       {
         label: "Wall Art",
@@ -378,6 +381,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Lamp & Lights",
+     href:"/product",
     children: [
       {
         label: "Outdoor Lights",
@@ -410,6 +414,7 @@ const NAV_ITEMS = [
 
   {
     label: "Sofa",
+     href:"/product",
     children: [
       {
         label: "3 Seater Sofas",
@@ -426,6 +431,7 @@ const NAV_ITEMS = [
 
   {
     label: "Wardrobe",
+     href:"/product",
     children: [
       {
         label: "2 Door",
@@ -442,6 +448,7 @@ const NAV_ITEMS = [
 
   {
     label: "Furnishing",
+     href:"/product",
     children: [
       {
         label: "Essentials",

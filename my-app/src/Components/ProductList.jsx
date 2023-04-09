@@ -31,25 +31,22 @@ const ProductList = () => {
   }, [location.search]);
   return (
     <>
-
-   <SimpleGrid columns={[1, 1, 3]} spacing={3}>
-          {loading && (
-            <Spinner
-              size="xl"
-              thickness="7px"
-              color="orange.500"
-              position="absolute"
-              top="50%"
-              left="50%"
-            />
-          )}
-          {furnitureProduct.length > 0 &&
-            furnitureProduct.map((el) => {
-              return <ProductCard key={el.id} card={el} />;
-            })}
-        </SimpleGrid>
-      
-
+      <SimpleGrid columns={[1, 1, 3]} spacing={3}>
+        {loading && (
+          <Spinner
+            size="xl"
+            thickness="7px"
+            color="orange.500"
+            position="absolute"
+            top="50%"
+            left="50%"
+          />
+        )}
+        {furnitureProduct.length > 0 &&
+          furnitureProduct.map((el) => {
+            return <ProductCard key={el.id} card={el} />;
+          })}
+      </SimpleGrid>
     </>
   );
 };

@@ -12,20 +12,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import axios from "axios";
-
+import { useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 
 const CheckoutSummary = () => {
-  const [cartData, setCartData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`https://confused-cape-dog.cyclic.app/card-data`)
-      .then((res) => setCartData(res.data))
-      .catch((err) => console.log("error fetching cart data"));
-  }, []);
-
-  const total = cartData.reduce(
+  const { cart_products } = useSelector((store) => store.cartReducer);
+  const total = cart_products.reduce(
     (acc, current) => acc + current.quantity * current.price,
     0
   );
@@ -38,34 +30,35 @@ const CheckoutSummary = () => {
         </Heading>
         <Divider />
 
-        {cartData.map((e) => {
-          return (
-            <>
-              <HStack
-                w={"450px"}
-                p={"1"}
-                alignItems="center"
-                justifyItems="center"
-              >
-                <Image w="75px" src={e.img} alt={e.name} />
-                <Heading
-                  w="200px"
-                  size="md"
-                  color="darkgreen"
-                  textAlign={"center"}
+        {cart_products.length > 0 &&
+          cart_products.map((e) => {
+            return (
+              <>
+                <HStack
+                  w={"450px"}
+                  p={"1"}
+                  alignItems="center"
+                  justifyItems="center"
                 >
-                  {e.name}
-                </Heading>
-                <Text p={3} textAlign={"center"}>
-                  Quantity: {e.quantity}
-                </Text>
-                <Heading w="100px" color="purple" size="md">
-                  ₹ {e.price}
-                </Heading>
-              </HStack>
-            </>
-          );
-        })}
+                  <Image w="75px" src={e.img} alt={e.name} />
+                  <Heading
+                    w="200px"
+                    size="md"
+                    color="darkgreen"
+                    textAlign={"center"}
+                  >
+                    {e.name}
+                  </Heading>
+                  <Text p={3} textAlign={"center"}>
+                    Quantity: {e.quantity}
+                  </Text>
+                  <Heading w="100px" color="purple" size="md">
+                    ₹ {e.price}
+                  </Heading>
+                </HStack>
+              </>
+            );
+          })}
 
         <Divider />
 

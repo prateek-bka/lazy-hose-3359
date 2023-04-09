@@ -31,33 +31,33 @@ const ProductCard = ({ card }) => {
     (store) => store.cartReducer
   );
 
-  // console.log(isLoading, isError, cart_products);
+  console.log(cart_products);
 
   const handleCart = async (card) => {
     if (isAuthenticated) {
-      dispatch(getcartRequest());
-      await axios
-        .post(`https://confused-cape-dog.cyclic.app/card-data`, card)
-        .then((res) => {
-          dispatch(addcartProduct(res.data));
-          toast({
-            title: "Great Choice",
-            description: "Products added Successfully",
-            status: "success",
-            duration: 4000,
-            isClosable: true,
-          });
-        })
-        .catch(() => {
-          dispatch(getcartFailure());
-          toast({
-            title: "Already in cart 😍",
-            description: "Go to cart and make it yours",
-            status: "info",
-            duration: 4000,
-            isClosable: true,
-          });
-        });
+      // dispatch(getcartRequest());
+      // await axios
+      //   .post(`http://localhost:8080/card-data`, card)
+      //   .then((res) => {
+      dispatch(addcartProduct(card));
+      toast({
+        title: "Great Choice",
+        description: "Products added Successfully",
+        status: "success",
+        duration: 4000,
+        isClosable: true,
+      });
+      //   })
+      // .catch(() => {
+      //   dispatch(getcartFailure());
+      //   toast({
+      //     title: "Already in cart 😍",
+      //     description: "Go to cart and make it yours",
+      //     status: "info",
+      //     duration: 4000,
+      //     isClosable: true,
+      //   });
+      // });
     } else {
       toast({
         title: "Sorry",

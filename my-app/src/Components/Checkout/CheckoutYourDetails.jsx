@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { clearall } from "../../Redux/CartReducer/action";
+import { useDispatch } from "react-redux";
 import {
   Box,
   Button,
@@ -32,10 +33,10 @@ import {
 } from "@chakra-ui/react";
 
 import Confetti from "./OrderSuccessCelebration";
-
+import { useNavigate } from "react-router-dom";
 const CheckoutYourDetails = () => {
   const toast = useToast();
-
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
@@ -43,7 +44,7 @@ const CheckoutYourDetails = () => {
   const [cardNumber, setCardNumber] = useState(0);
   const [cvv, setCVV] = useState(0);
   const [expiry, setExpiry] = useState(0);
-
+  const dispatch = useDispatch();
   function DetailsSubmitButton() {
     const id = "test-toast";
     if (name && address && city) {
@@ -101,8 +102,9 @@ const CheckoutYourDetails = () => {
           colorScheme="red"
           mt={4}
           onClick={() => {
+            dispatch(clearall());
+
             if (!toast.isActive(id)) {
-              
               toast({
                 id,
                 title: "Congratulations 🎉 Your order is placed",
@@ -113,8 +115,10 @@ const CheckoutYourDetails = () => {
                 isClosable: true,
                 position: "top",
               });
-              <Confetti />;
+
+              // <Confetti />;
             }
+            navigate("/");
           }}
         >
           Place Order
@@ -151,6 +155,7 @@ const CheckoutYourDetails = () => {
         mt={3}
         colorScheme="red"
         onClick={() => {
+          dispatch(clearall());
           if (!toast.isActive(id)) {
             toast({
               id,
@@ -163,6 +168,7 @@ const CheckoutYourDetails = () => {
               position: "top",
             });
           }
+          navigate("/");
         }}
       >
         Place Order

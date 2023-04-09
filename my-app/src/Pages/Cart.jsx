@@ -3,9 +3,9 @@ import axios from "axios";
 import "../styles/cart.css";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-// import { getcartSuccess } from '../Redux/CartReducer/action'
+import { getcartSuccess,increse ,decrese} from '../Redux/CartReducer/action'
 import { useAuth0 } from "@auth0/auth0-react";
-import { getcartSuccess } from "../Redux/CartReducer/action";
+import { cartitemdelete } from "../Redux/CartReducer/action";
 import styled from "styled-components";
 import { Button, useStatStyles } from "@chakra-ui/react";
 import { Toast, useToast } from "@chakra-ui/react";
@@ -22,6 +22,7 @@ export const Cart = () => {
   const { isLoading, isError, cart_products } = useSelector(
     (store) => store.cartReducer
   );
+
   const { isAuthenticated } = useAuth0();
   //     const number_of_item=cart_products.reduce((acc,current)=>acc+current.quantity,0)
   // console.log(number_of_item)
@@ -29,54 +30,13 @@ export const Cart = () => {
     (acc, current) => acc + current.quantity * current.price,
     0
   );
-  console.log(cart_products, isLoading, isError);
+  // console.log(cart_products, isLoading, isError);
   const [change, setChange] = useState(false);
   const handleChange = () => {
     setChange((prev) => !prev);
   };
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    axios
-      .get(`https://confused-cape-dog.cyclic.app/card-data`)
-      .then((res) => {
-        dispatch(getcartSuccess(res.data));
-      })
-      .catch((err) => console.log("ERR-", err));
-  }, [change]);
-  const handleRemove = async (id) => {
-    await axios
-      .delete(`https://confused-cape-dog.cyclic.app/card-data/${id}`)
-      .then(() => {
-        handleChange();
-        toast({
-          description: "Items Romoved",
-          status: "success",
-          duration: 4000,
-          isClosable: true,
-        });
-      });
-  };
-  const handleIncrease = async (id) => {
-    let res = await axios.get(
-      `https://confused-cape-dog.cyclic.app/card-data/${id}`
-    );
-
-    let quantity = { quantity: res.data.quantity + 1 };
-    axios
-      .patch(`https://confused-cape-dog.cyclic.app/card-data/${id}`, quantity)
-      .then(() => handleChange());
-  };
-  const handleDecrese = async (id) => {
-    let res = await axios.get(
-      `https://confused-cape-dog.cyclic.app/card-data/${id}`
-    );
-    let quantity = { quantity: res.data.quantity - 1 };
-    await axios
-      .patch(`https://confused-cape-dog.cyclic.app/card-data/${id}`, quantity)
-      .then(() => handleChange());
-  };
-  // style={{border:"1px solid gray",display:"flex",gap:"50px"}}
   if (cart_products.length == 0 && isAuthenticated == true) {
     return (
       <div
@@ -113,18 +73,18 @@ export const Cart = () => {
             <button
               className="inc_btn"
               disabled={ele.quantity <= 1 ? "true" : false}
-              onClick={() => handleDecrese(ele.id)}
+              onClick={() => dispatch(decrese(ele.id))}
             >
               -
             </button>
             <button className="inc">Quantity : {ele.quantity}</button>
-            <button className="inc_btn" onClick={() => handleIncrease(ele.id)}>
+            <button className="inc_btn" onClick={() => dispatch(increse(ele.id))}>
               +
             </button>
             <button className="inc">Price : {ele.price}</button>
             <button
               style={{ color: "green" }}
-              onClick={() => handleRemove(ele.id)}
+              onClick={() => dispatch(cartitemdelete(ele.id))}
             >
               <FiTrash2 size={25} />
             </button>

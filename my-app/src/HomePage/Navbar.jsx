@@ -33,9 +33,12 @@ import {
   FaPeopleCarry,
   FaUser,
 } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { clearall } from "../Redux/CartReducer/action";
+
+
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   return (
@@ -115,9 +118,13 @@ const DesktopNav = () => {
   const handleNavigationToHomepage = () => {
     navigate("/");
   };
-
+    const dispatch=useDispatch()
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
-
+     const handlelogout=()=>{
+      dispatch(clearall())
+      logout({ returnTo: window.location.origin })
+      
+     }
   return (
     <Stack direction={"row"} spacing={4} margin={"auto"}>
       <img
@@ -204,7 +211,7 @@ const DesktopNav = () => {
           {isAuthenticated ? (
             <Button
               colorScheme={"blackAlpha"}
-              onClick={() => logout({ returnTo: window.location.origin })}
+              onClick={handlelogout}
             >
               Logout
             </Button>

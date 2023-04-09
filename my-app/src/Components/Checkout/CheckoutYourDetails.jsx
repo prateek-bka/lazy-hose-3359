@@ -102,6 +102,7 @@ const CheckoutYourDetails = () => {
           mt={4}
           onClick={() => {
             if (!toast.isActive(id)) {
+              
               toast({
                 id,
                 title: "Congratulations 🎉 Your order is placed",

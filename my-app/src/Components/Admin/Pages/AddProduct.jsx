@@ -32,7 +32,7 @@ const AddProduct = () => {
    }  
   return (
     <div>
-      <AdminNavbar/>
+  
          <div style={{width:"30%",margin:"auto",padding:"10px",boxShadow:"rgba(14, 233, 98, 0.87) 0px 2px 8px 0px",textAlign:"center"}}>
             <h2>Add Product</h2>
             <form onSubmit={handleSubmit} >

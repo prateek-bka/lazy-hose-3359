@@ -16,7 +16,7 @@ import {
   useDisclosure,
   Heading,
 } from "@chakra-ui/react";
-import { FiShoppingCart } from "react-icons/fi";
+import { FiShoppingCart} from "react-icons/fi";
 import { useAuth0 } from "@auth0/auth0-react";
 import {
   HamburgerIcon,
@@ -31,7 +31,8 @@ import {
   FaCaretSquareDown,
   FaCartPlus,
   FaPeopleCarry,
-  FaUser,
+ 
+  FaUserAlt,
 } from "react-icons/fa";
 import { useSelector,useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -114,6 +115,9 @@ const DesktopNav = () => {
   const handleNavigation = () => {
     navigate("/cart");
   };
+  const handleAdmin =()=>{
+    navigate("/admin")
+  }
 
   const handleNavigationToHomepage = () => {
     navigate("/");
@@ -223,6 +227,20 @@ const DesktopNav = () => {
               Login
             </Button>
           )}
+        </Box>
+        {/* Admin Section */}
+        <Box 
+        // border="1px"
+         className="cart"
+         paddingTop={"15px"}
+         
+         
+         onClick={handleAdmin}
+         textAlign="center"
+         m={"1"}
+         p={"1"} >
+        <FaUserAlt size={"2em"}  />
+        <Heading size="xs" ml="-5px"onClick={handleAdmin} >Admin</Heading>
         </Box>
       </Box>
     </Stack>

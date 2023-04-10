@@ -8,7 +8,9 @@
       "category": "sofa",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 1
     },
     {
       "id": 2,
@@ -18,7 +20,9 @@
       "category": "sofa",
       "rating": 3,
       "ratingImage": "⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 6,
+      "dislike": 6
     },
     {
       "id": 3,
@@ -28,7 +32,9 @@
       "category": "sofa",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 4,
+      "dislike": 2
     },
     {
       "id": 4,
@@ -38,7 +44,9 @@
       "category": "sofa",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 3,
+      "dislike": 2
     },
     {
       "id": 5,
@@ -48,7 +56,9 @@
       "category": "sofa",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 6,
@@ -58,7 +68,9 @@
       "category": "sofa",
       "rating": 3,
       "ratingImage": "⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 8,
+      "dislike": 4
     },
     {
       "id": 7,
@@ -68,7 +80,9 @@
       "category": "sofa",
       "rating": 2,
       "ratingImage": "⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 4
     },
     {
       "id": 8,
@@ -78,7 +92,9 @@
       "category": "sofa",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 9,
@@ -88,7 +104,9 @@
       "category": "sofa",
       "rating": 2,
       "ratingImage": "⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "dislike": 2,
+      "like": 1
     },
     {
       "id": 10,
@@ -98,7 +116,9 @@
       "category": "sofa",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "dislike": 3,
+      "like": 2
     },
     {
       "id": 11,
@@ -108,7 +128,9 @@
       "category": "sofa",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 12,
@@ -118,7 +140,9 @@
       "category": "chair",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 13,
@@ -128,7 +152,9 @@
       "category": "chair",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 1
     },
     {
       "id": 14,
@@ -138,7 +164,9 @@
       "category": "chair",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 15,
@@ -148,7 +176,9 @@
       "category": "chair",
       "rating": 3,
       "ratingImage": "⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 2
     },
     {
       "id": 16,
@@ -158,7 +188,9 @@
       "category": "chair",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 3
     },
     {
       "id": 17,
@@ -168,7 +200,9 @@
       "category": "chair",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 3,
+      "dislike": 2
     },
     {
       "id": 18,
@@ -178,7 +212,9 @@
       "category": "table",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 1
     },
     {
       "id": 19,
@@ -188,7 +224,9 @@
       "category": "table",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 3,
+      "dislike": 2
     },
     {
       "id": 20,
@@ -198,7 +236,9 @@
       "category": "table",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 21,
@@ -208,7 +248,9 @@
       "category": "table",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 2
     },
     {
       "id": 22,
@@ -218,7 +260,9 @@
       "category": "table",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 2
     },
     {
       "id": 23,
@@ -240,7 +284,9 @@
       "category": "bed",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 2
     },
     {
       "id": 25,
@@ -250,7 +296,9 @@
       "category": "bed",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 2
     },
     {
       "id": 26,
@@ -260,7 +308,9 @@
       "category": "bed",
       "rating": 4,
       "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 2
     },
     {
       "id": 27,
@@ -270,7 +320,9 @@
       "category": "bed",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 28,
@@ -280,7 +332,9 @@
       "category": "bed",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 2
     },
     {
       "id": 29,
@@ -290,17 +344,9 @@
       "category": "wardrobe",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
-    },
-    {
-      "id": 30,
-      "name": "Ujisato 4+ Door Wardrobe",
-      "price": 26550,
-      "img": "https://ii3.pepperfry.com/media/catalog/product/u/j/494x544/ujisato-6-door-wardrobe-with-2-drawers-by-mintwud-ujisato-6-door-wardrobe-with-2-drawers-by-mintwud-iktmg9.jpg",
-      "category": "wardrobe",
-      "rating": 4,
-      "ratingImage": "⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 2,
+      "dislike": 1
     },
     {
       "id": 31,
@@ -310,7 +356,9 @@
       "category": "wardrobe",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 1,
+      "dislike": 1
     },
     {
       "id": 32,
@@ -320,7 +368,9 @@
       "category": "wardrobe",
       "rating": 5,
       "ratingImage": "⭐⭐⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "like": 13,
+      "dislike": 15
     },
     {
       "id": 33,
@@ -330,7 +380,9 @@
       "category": "wardrobe",
       "rating": 3,
       "ratingImage": "⭐⭐⭐",
-      "quantity": 1
+      "quantity": 1,
+      "dislike": 1,
+      "like": 3
     }
   ]
 }

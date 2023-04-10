@@ -13,9 +13,9 @@
 
 <br />
 
-<h3 align="center"><a href="https://furnituretry-official.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://furnituretry.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
 
-### 🔗 Live Deployed URL: https://furnituretry-official.netlify.app/
+### 🔗 Live Deployed URL: https://furnituretry.vercel.app/
 
 <br />
 <br />

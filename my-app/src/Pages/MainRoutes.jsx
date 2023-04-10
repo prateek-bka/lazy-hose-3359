@@ -6,6 +6,9 @@ import Checkout from "./Checkout/Checkout";
 
 import ProductDetails from "./ProductDetails";
 import ProductPage from "./ProductPage";
+import AdminHomePage from "../Components/Admin/Pages/AdminHomePage";
+import AddProduct from "../Components/Admin/Pages/AddProduct";
+import ProductList from "../Components/Admin/Pages/ProductList";
 
 const MainRoutes = () => {
   return (
@@ -15,7 +18,9 @@ const MainRoutes = () => {
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/checkout" element={<Checkout />} />
-
+      <Route path='/admin'  element={<AdminHomePage/>} />
+      <Route path="/add-product"  element={< AddProduct/>}  />
+      <Route path="/product-list"  element={<ProductList/>}  />
     </Routes>
   );
 };
